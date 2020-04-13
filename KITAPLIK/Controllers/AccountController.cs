@@ -28,16 +28,7 @@ namespace KITAPLIK.Controllers
             db.SaveChanges();
             return View();
 
-            var bilgi = db.tbl_account.FirstOrDefault(x => x.userName == acc.userName && x.password == acc.password);
-            if (bilgi != null)
-            {
-                FormsAuthentication.SetAuthCookie(bilgi.userName, false);
-                return RedirectToAction("AnaSayfa", "AnaSayfa");
-            }
-            else
-            {
-                return View();
-            }
+  
         }
         
     }
