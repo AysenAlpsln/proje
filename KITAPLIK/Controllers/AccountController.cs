@@ -30,6 +30,20 @@ namespace KITAPLIK.Controllers
 
   
         }
+        [HttpPost]
+        public ActionResult Login(tbl_account t)
+        {
+            var bilgiler = db.tbl_account.FirstOrDefault(x => x.userName == t.userName && x.password == t.password);
+            if(bilgiler!= null)
+            {
+                FormsAuthentication.SetAuthCookie(bilgiler.userName, false);
+                return RedirectToAction("Anasayfa", "Anasayfa");
+            }
+            else
+            {
+                return View();
+            }
+        }
         
     }
 }
