@@ -230,6 +230,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\SingUp.cshtml" />
     <Content Include="Views\Anasayfa\Anasayfa.cshtml" />
+    <Content Include="Views\Giris\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
