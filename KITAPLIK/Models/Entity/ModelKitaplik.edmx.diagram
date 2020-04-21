@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="09f43c821a9b4a598bb366a33ce00240" Name="Diagram1">
-        <EntityTypeShape EntityType="KITAPLIKModel.tbl_account" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KITAPLIKModel.tbl_account" Width="1.5" PointX="0.875" PointY="0.875" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

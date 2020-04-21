@@ -4,15 +4,188 @@
 }
 
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Anasayfa</title>
+    <title>AnalizeBook</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <h1>Welcome to Main Page of AnalizeBook</h1>
+
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">AnalizeBook</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Keşfet</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Türler<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Edebiyat</a></li>
+                            <li><a href="#">Türk Klasikleri</a></li>
+                            <li><a href="#">Roman</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Kitaplar</a></li>
+                    <li><a href="#">Yazarlar</a></li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group input-group">
+                        <input type="text" class="form-control" placeholder="Ara...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toogle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> My Account</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Hesap Ayarları</a></li>
+                            <li><a href="#">Eksik Kitap Bildir</a></li>
+                            <li><a href="#">Çıkış Yap</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-3 well">
+                <div class="well">
+                    <p><a href="#">My Profile</a></p>
+                    <img src="~/web pages/Project Images/VESIKALIK.jpg" class="img-circle" height="180" width="150" alt="Avatar">
+                </div>
+                <div class="well">
+                    <p><a href="#">Interests</a></p>
+                    <p>
+                        <span class="label label-default">News</span>
+                        <span class="label label-primary">W3Schools</span>
+                        <span class="label label-success">Labels</span>
+                        <span class="label label-info">Football</span>
+                        <span class="label label-warning">Gaming</span>
+                        <span class="label label-danger">Friends</span>
+                    </p>
+                </div>
+                <div class="alert alert-success fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                    <p><strong>Haydi!</strong></p>
+                    Hep Birlikte Okuyalım.
+                </div>
+                <p><a href="#">Bkm Kitap</a></p>
+                <p><a href="#">GoodReads</a></p>
+                <p><a href="#">Link</a></p>
+            </div>
+            <div class="col-sm-7">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default text-left">
+                            <div class="panel-body">
+                                <p contenteditable="true">Status: Feeling Blue</p>
+                                <button type="button" class="btn btn-default btn-sm">
+                                    <span class="glyphicon glyphicon-thumbs-up"></span> Like
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="well">
+                            <p>Ayşen</p>
+                            <img src="~/web pages/Project Images/VESIKALIK.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="well">
+                            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="well">
+                            <p>Saliha</p>
+                            <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="well">
+                            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="well">
+                            <p>Betül</p>
+                            <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="well">
+                            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="well">
+                            <p>Ahmet</p>
+                            <img src="~/web pages/Project Images/p1.jpeg" class="img-circle" height="55" width="55" alt="Avatar">
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="well">
+                            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 well">
+                <div class="thumbnail">
+                    <p>2020 Okuma Hedefim</p>
+                    <img src="~/web pages/Project Images/book.jpg" width="400" height="300">
+                    <button class="btn btn-warning">Güncelle</button>
+                </div>
+                <div class="well">
+                    <p>ADS</p>
+                </div>
+                <div class="well">
+                    <p>ADS</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <footer class="container-fluid text-center">
+        <p>&copy Bu web sitesi 2020 yılında yapılmıştır.</p>
+    </footer>
+
 </body>
 </html>
+
