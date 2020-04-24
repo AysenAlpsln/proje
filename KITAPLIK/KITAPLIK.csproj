@@ -134,6 +134,33 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\data.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>data.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\data.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\data.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>data.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Kategorıler.cs">
+      <DependentUpon>data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Kutuphanem.cs">
+      <DependentUpon>data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\KıtapDetay.cs">
+      <DependentUpon>data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Kıtaplar.cs">
+      <DependentUpon>data.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\ModelKitaplik.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -151,6 +178,15 @@
     </Compile>
     <Compile Include="Models\Entity\tbl_account.cs">
       <DependentUpon>ModelKitaplik.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Uyeler.cs">
+      <DependentUpon>data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\yazarlar.cs">
+      <DependentUpon>data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\Yorum.cs">
+      <DependentUpon>data.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -175,6 +211,16 @@
     <Content Include="LoginRegistrationForm\images\bg.jpg" />
     <Content Include="LoginRegistrationForm\images\ImageAttribution.txt" />
     <Content Include="LoginRegistrationForm\index3.html" />
+    <Content Include="Models\Entity\data.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>data.edmx</DependentUpon>
+      <LastGenOutput>data.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Entity\data.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>data.edmx</DependentUpon>
+      <LastGenOutput>data.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Entity\ModelKitaplik.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelKitaplik.edmx</DependentUpon>
@@ -202,6 +248,13 @@
     </EntityDeploy>
     <Content Include="Models\Entity\ModelKitaplik.edmx.diagram">
       <DependentUpon>ModelKitaplik.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Entity\data.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>data.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Entity\data.edmx.diagram">
+      <DependentUpon>data.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
