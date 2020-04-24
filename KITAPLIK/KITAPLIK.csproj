@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AnasayfaController.cs" />
+    <Compile Include="Controllers\HesabımController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KesfetController.cs" />
     <Compile Include="Global.asax.cs">
@@ -310,6 +311,7 @@
     <Content Include="Views\Anasayfa\Anasayfa.cshtml" />
     <Content Include="Views\Giris\Index.cshtml" />
     <Content Include="Views\Kesfet\Index.cshtml" />
+    <Content Include="Views\Hesabım\Hesabım.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

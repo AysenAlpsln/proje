@@ -16,9 +16,11 @@
         /* Set black background color, white text and some padding */
         footer {
             background-color: #555;
-            color: white;
+            color: lightgray;
             padding: 15px;
         }
+        
+        
     </style>
 </head>
 <body>
@@ -61,6 +63,7 @@
                     <li class="dropdown">
                         <a class="dropdown-toogle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> My Account</a>
                         <ul class="dropdown-menu">
+                            <li><a href="/Hesabım/Hesabım">Hesabım</a></li>
                             <li><a href="#">Hesap Ayarları</a></li>
                             <li><a href="#">Eksik Kitap Bildir</a></li>
                             <li><a href="#">Çıkış Yap</a></li>
@@ -76,17 +79,13 @@
             <div class="col-sm-3 well">
                 <div class="well">
                     <p><a href="#">My Profile</a></p>
-                    <img src="~/web pages/Project Images/VESIKALIK.jpg" class="img-circle" height="180" width="150" alt="Avatar">
+                    Buraya veritabanından profil resmi çekilecek.
+                    @*<img src="~/web pages/Project Images/VESIKALIK.jpg" class="img-circle" height="180" width="150" alt="Avatar">*@
                 </div>
                 <div class="well">
-                    <p><a href="#">Interests</a></p>
+                    <p><a href="#">Okuduğu Kitap</a></p>
                     <p>
-                        <span class="label label-default">News</span>
-                        <span class="label label-primary">W3Schools</span>
-                        <span class="label label-success">Labels</span>
-                        <span class="label label-info">Football</span>
-                        <span class="label label-warning">Gaming</span>
-                        <span class="label label-danger">Friends</span>
+                        Okuduğu kitap girilen profile göre veritabanından alınacak.
                     </p>
                 </div>
                 <div class="alert alert-success fade in">
@@ -94,30 +93,18 @@
                     <p><strong>Haydi!</strong></p>
                     Hep Birlikte Okuyalım.
                 </div>
-                <p><a href="#">Bkm Kitap</a></p>
-                <p><a href="#">GoodReads</a></p>
-                <p><a href="#">Link</a></p>
+                <p><a href="https://www.bkmkitap.com/">Bkm Kitap</a></p>
+                <p><a href="https://www.goodreads.com/">GoodReads</a></p>
+                <p><a href="https://1000kitap.com/">1000Kitap</a></p>
             </div>
             <div class="col-sm-7">
 
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="panel panel-default text-left">
-                            <div class="panel-body">
-                                <p contenteditable="true">Status: Feeling Blue</p>
-                                <button type="button" class="btn btn-default btn-sm">
-                                    <span class="glyphicon glyphicon-thumbs-up"></span> Like
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                       Veritabnından çekilen yorumlar eklenecek.
 
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="well">
                             <p>Ayşen</p>
-                            <img src="~/web pages/Project Images/VESIKALIK.jpg" class="img-circle" height="55" width="55" alt="Avatar">
                         </div>
                     </div>
                     <div class="col-sm-9">
@@ -170,13 +157,8 @@
                 <div class="thumbnail">
                     <p>2020 Okuma Hedefim</p>
                     <img src="~/web pages/Project Images/book.jpg" width="400" height="300">
+                    <br />
                     <button class="btn btn-warning">Güncelle</button>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
                 </div>
             </div>
         </div>

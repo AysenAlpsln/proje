@@ -10,16 +10,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
     <style>
-
         /* Set black background color, white text and some padding */
         footer {
-            background-color: #555;
-            color: white;
+            background-color:#555;
+            color: lightgray;
             padding: 15px;
         }
     </style>
+
 </head>
 <body>
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
@@ -60,6 +59,7 @@
                     <li class="dropdown">
                         <a class="dropdown-toogle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> My Account</a>
                         <ul class="dropdown-menu">
+                            <li><a href="/Hesabım/Hesabım">Hesabım</a></li>
                             <li><a href="#">Hesap Ayarları</a></li>
                             <li><a href="#">Eksik Kitap Bildir</a></li>
                             <li><a href="#">Çıkış Yap</a></li>
@@ -73,5 +73,9 @@
     <div class="container">
         @RenderBody()
     </div>
+
+    <footer class="container-fluid text-center" style="background-color:#555;">
+        <p>&copy Bu web sitesi 2020 yılında yapılmıştır.</p>
+    </footer>
 </body>
 </html>
