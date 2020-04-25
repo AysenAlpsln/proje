@@ -4,5 +4,181 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-Profilimiz
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #ffffdf;
+      
+      color:gray;
+    }
+    .navbar-default{
+      background-color: #ffffdf;
+    }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">AB</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Akış</a></li>
+                <li><a href="#">Okuduklarım</a></li>
+                <li><a href="#">Okuyacaklarım</a></li>
+                <li><a href="#">Yorumlar</a></li>
+            </ul>
+            <div class="container">
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-warning navbar-btn" data-toggle="modal" data-target="#profil">Profili Düzenle</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="profil" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content container-fluid">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Profilinizi Düzenleyiniz</h4>
+                            </div>
+                            <form action="/action_page.php">
+                                <div class="form-group">
+                                    <label for="adsoyad">Adınız Soyadınız:</label>
+                                    <input type="text" class="form-control" id="adsoyad">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dogumyer">Doğum Yeriniz:</label>
+                                    <input type="text" class="form-control" id="dogumyer">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dogumtarih">Doğum Tarihiniz:</label>
+                                    <input type="text" class="form-control" id="dogumtarih">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cinsiyet">Cinsiyatiniz:</label>
+                                    <input type="text" class="form-control" id="cinsiyet">
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="dogumyer">Doğum Yeriniz:</label>
+                                    <input type="text" class="form-control" id="dogumyer">
+                                </div>
+                                <div class="form-group">
+                                    <label for="meslek">Mesleğiniz:</label>
+                                    <input type="text" class="form-control" id="meslek">
+                                </div>
+                                <div class="form-group">
+                                    <label for="sehir">Yaşadığınız Şehir:</label>
+                                    <input type="text" class="form-control" id="sehir">
+                                </div>
+                                <div class="form-group">
+                                    <label for="bio">Mini Biyografiniz:</label>
+                                    <input type="text" class="form-control" id="bio">
+                                </div>
+                                <button type="submit" class="btn btn-info">Kaydet</button>
+                            </form>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row content">
+            <div class="col-sm-3 sidenav ">
+                <h2>Kullanıcı ismi</h2>
+                <ul class="nav">
+                    <li>Cinsiyet</li>
+                    <li>Doğum Tarihi</li>
+                    <li>Email</li>
+                    <li>Katıldığı tarih</li>
+                </ul><br>
+            </div>
+            <br>
+
+            <div class="col-sm-9">
+                <h4><small>RECENT POSTS</small></h4>
+                <hr>
+                <h2>I Love Food</h2>
+                <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
+                <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
+                <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <br><br>
+
+                <h4><small>RECENT POSTS</small></h4>
+                <hr>
+                <h2>Officially Blogging</h2>
+                <h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>
+                <h5><span class="label label-success">Lorem</span></h5><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <hr>
+
+                <h4>Leave a Comment:</h4>
+                <form role="form">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+                <br><br>
+
+                <p><span class="badge">2</span> Comments:</p><br>
+
+                <div class="row">
+                    <div class="col-sm-2 text-center">
+                        <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
+                        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <br>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
+                        <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <br>
+                        <p><span class="badge">1</span> Comment:</p><br>
+                        <div class="row">
+                            <div class="col-sm-2 text-center">
+                                <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                            </div>
+                            <div class="col-xs-10">
+                                <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
+                                <p>Me too! WOW!</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
 
