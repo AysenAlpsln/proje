@@ -1,0 +1,36 @@
+﻿@model KITAPLIK.Models.Entity.Uyeler
+@{
+    ViewBag.Title = "ProfilGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("ProfilDüzenle", "Hesabım", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.LabelFor(m => m.AdSoyad, "Adınız ve Soyadınız:")
+    @Html.TextBoxFor(m => m.AdSoyad, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.DogumYeri, "Doğum Yeriniz:")
+    @Html.TextBoxFor(m => m.DogumYeri, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.DogumTarıhı, "Doğum Tarihiniz:")
+    @Html.TextBoxFor(m => m.DogumTarıhı, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.Cınsıyet, "Cinsiyetiniz:")
+    <select class="form-control" id="cinsiyet" name="Cınsıyet">
+        <option>Kadın</option>
+        <option>Erkek</option>
+        <option>Belirtmek İstemiyorum</option>
+    </select>
+    <br />
+    @Html.LabelFor(m => m.Meslegi, "Mesleğiniz:")
+    @Html.TextBoxFor(m => m.Meslegi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.YasadıgıSehir, "Yaşadığınız Şehir:")
+    @Html.TextBoxFor(m => m.YasadıgıSehir, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.Biografi, "Mini Biografiniz:")
+    @Html.TextAreaFor(m => m.Biografi, new { @class = "form-control" })
+ </div>
+    <button type="submit" class="btn btn-info">Kaydet</button>
+}

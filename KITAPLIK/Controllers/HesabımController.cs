@@ -11,20 +11,31 @@ namespace KITAPLIK.Controllers
     {
         // GET: Hesabım
         KıtapEntities1 db = new KıtapEntities1();
-
-        public ActionResult Hesabım(int id)
+        
+        public ActionResult Hesabım()
         {
             return View();
         }
-        public ActionResult Bilgi(int id)
+        [HttpPost]
+        public ActionResult ProfilGetir(int id)
         {
-            var bilgiler = db.Uyeler.Find(id);
-            if (bilgiler != null)
-            {
-                return View(db.Uyeler.Where(m => m.Uyeıd == id).ToList());
-            }
-            return View();
+            var uye = db.Uyeler.Find(id);
+            return View("ProfilGetir", uye);
         }
+        public ActionResult ProfilDüzenle(Uyeler u)
+        {
+            var uye = db.Uyeler.Find(u.Uyeıd);
+            uye.AdSoyad = u.AdSoyad;
+            uye.DogumYeri = u.DogumYeri;
+            uye.DogumTarıhı = u.DogumTarıhı;
+            uye.Cınsıyet = u.Cınsıyet;
+            uye.Meslegi = u.Meslegi;
+            uye.YasadıgıSehir = u.YasadıgıSehir;
+            uye.Biografi = u.Biografi;
+            db.SaveChanges();
+            return RedirectToAction("Hesabım");
+        }
+        
         
         
     }
