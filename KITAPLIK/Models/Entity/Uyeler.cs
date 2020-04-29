@@ -25,10 +25,14 @@ namespace KITAPLIK.Models.Entity
         public string takmaad { get; set; }
         public string AdSoyad { get; set; }
         public string sıfre { get; set; }
-        public bool Cınsıyet { get; set; }
-        public System.DateTime DogumTarıhı { get; set; }
+        public Nullable<bool> Cınsıyet { get; set; }
+        public Nullable<System.DateTime> DogumTarıhı { get; set; }
         public string emaıl { get; set; }
         public string Telefon { get; set; }
+        public string DogumYeri { get; set; }
+        public string Meslegi { get; set; }
+        public string YasadıgıSehir { get; set; }
+        public string Biografi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Kutuphanem> Kutuphanem { get; set; }

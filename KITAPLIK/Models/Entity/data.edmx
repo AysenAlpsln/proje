@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="KıtapModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="KıtapModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Kategorıler">
           <Key>
             <PropertyRef Name="Kategorııd" />
@@ -71,10 +71,14 @@
           <Property Name="takmaad" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="AdSoyad" Type="nvarchar(max)" Nullable="false" />
           <Property Name="sıfre" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="Cınsıyet" Type="bit" Nullable="false" />
-          <Property Name="DogumTarıhı" Type="smalldatetime" Nullable="false" />
+          <Property Name="Cınsıyet" Type="bit" />
+          <Property Name="DogumYeri" Type="nvarchar" MaxLength="50" />
+          <Property Name="DogumTarıhı" Type="smalldatetime" />
           <Property Name="emaıl" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Telefon" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
+          <Property Name="Meslegi" Type="nvarchar(max)" />
+          <Property Name="YasadıgıSehir" Type="nvarchar" MaxLength="50" />
+          <Property Name="Biografi" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="yazarlar">
           <Key>
@@ -279,8 +283,7 @@
             <End Role="Yorum" EntitySet="Yorum" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KıtapModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -346,12 +349,16 @@
           <Property Name="takmaad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="AdSoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="sıfre" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Cınsıyet" Type="Boolean" Nullable="false" />
-          <Property Name="DogumTarıhı" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Cınsıyet" Type="Boolean" />
+          <Property Name="DogumTarıhı" Type="DateTime" Precision="0" />
           <Property Name="emaıl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Kutuphanem" Relationship="Self.FK_Kutuphanem_Uyeler" FromRole="Uyeler" ToRole="Kutuphanem" />
           <NavigationProperty Name="Yorum" Relationship="Self.FK_Yorum_Uyeler" FromRole="Uyeler" ToRole="Yorum" />
+          <Property Name="DogumYeri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Meslegi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YasadıgıSehir" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Biografi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="yazarlar">
           <Key>
@@ -565,6 +572,10 @@
           <EntitySetMapping Name="Uyeler">
             <EntityTypeMapping TypeName="KıtapModel.Uyeler">
               <MappingFragment StoreEntitySet="Uyeler">
+                <ScalarProperty Name="Biografi" ColumnName="Biografi" />
+                <ScalarProperty Name="YasadıgıSehir" ColumnName="YasadıgıSehir" />
+                <ScalarProperty Name="Meslegi" ColumnName="Meslegi" />
+                <ScalarProperty Name="DogumYeri" ColumnName="DogumYeri" />
                 <ScalarProperty Name="Uyeıd" ColumnName="Uyeıd" />
                 <ScalarProperty Name="takmaad" ColumnName="takmaad" />
                 <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
