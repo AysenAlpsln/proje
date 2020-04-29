@@ -307,7 +307,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\SingUp.cshtml" />
+    <Content Include="Views\Account\SignUp.cshtml" />
     <Content Include="Views\Anasayfa\Anasayfa.cshtml" />
     <Content Include="Views\Giris\Index.cshtml" />
     <Content Include="Views\Kesfet\Index.cshtml" />

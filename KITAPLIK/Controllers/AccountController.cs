@@ -11,36 +11,37 @@ namespace KITAPLIK.Controllers
     public class AccountController : Controller
     {
         // GET: Account
-        KITAPLIKEntities1 db = new KITAPLIKEntities1();
+        KıtapEntities1 db = new KıtapEntities1();
         public ActionResult Index()
         {
             return View();
         }
         [HttpGet]
-        public ActionResult SingUp()
+        public ActionResult SignUp()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult SingUp(tbl_account acc)
+        public ActionResult SignUp(Uyeler acc)
         {
-            db.tbl_account.Add(acc);
+            db.Uyeler.Add(acc);
             db.SaveChanges();
             return View();
 
   
         }
         [HttpPost]
-        public ActionResult Login(tbl_account t)
+        public ActionResult Login(Uyeler t)
         {
-            var bilgiler = db.tbl_account.FirstOrDefault(x => x.userName == t.userName && x.password == t.password);
+            var bilgiler = db.Uyeler.FirstOrDefault(x => x.takmaad == t.takmaad && x.sıfre == t.sıfre);
             if(bilgiler!= null)
             {
-                FormsAuthentication.SetAuthCookie(bilgiler.userName, false);
+                FormsAuthentication.SetAuthCookie(bilgiler.takmaad, false);
                 return RedirectToAction("Anasayfa", "Anasayfa");
             }
             else
             {
+                ModelState.AddModelError(key: "", errorMessage: "Kullanıcı adı veya şifre hatalı");
                 return View();
             }
         }

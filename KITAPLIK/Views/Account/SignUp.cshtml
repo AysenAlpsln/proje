@@ -1,4 +1,4 @@
-﻿@model KITAPLIK.Models.Entity.tbl_account
+﻿@model KITAPLIK.Models.Entity.Uyeler
 @{
     Layout = null;
 }
@@ -42,11 +42,11 @@
                             <h1>Log in</h1>
                             <p>
                                 <label for="username" class="uname" data-icon="u"> Your username </label>
-                                <input id="username" name="userName" required="required" type="text" placeholder="myusername" />
+                                <input id="username" name="takmaad" required="required" type="text" placeholder="myusername" />
                             </p>
                             <p>
                                 <label for="password" class="youpasswd" data-icon="p"> Your password </label>
-                                <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
+                                <input id="password" name="sıfre" required="required" type="password" placeholder="eg. X8df!90EO" />
                             </p>
                             <p class="login button">
                                 <input type="submit" value="Login" />
@@ -59,37 +59,41 @@
                     </div>
 
                     <div id="register" class="animate form">
-                        <h1> Sign up </h1>
-                        <form action="#" method="post">
-                            <p>
-                                <label for="namesignup" class="name" data-icon="u">Your name and surname</label>
-                                <input id="namesignup" name="name" required="required" type="text" placeholder="" />
-                            </p>
-                            <p>
-                                <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-                                <input id="usernamesignup" name="userName" required="required" type="text" placeholder="mysuperusername" />
-                            </p>
-                            
-                            <p>
-                                <label for="emailsignup" class="youmail" data-icon="e"> Your email</label>
-                                <input id="emailsignup" name="email" required="required" type="email" placeholder="mysupermail@mail.com" />
-                            </p>
-                            <p>
-                                <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-                                <input id="passwordsignup" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
-                            </p>
-                            <p>
-                                <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-                                <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO" />
-                            </p>
-                            <p class="signin button">
-                                <input type="submit" value="Sign up" />
-                            </p>
-                            <p class="change_link">
-                                Already a member ?
-                                <a href="#tologin" class="to_register"> Go and log in </a>
-                            </p>
-                        </form>
+                        @using (Html.BeginForm("SignUp", "Account", FormMethod.Post))
+                        {
+                            <h1> Sign up </h1>
+                            <form action="#" method="post">
+                                <p>
+                                    <label for="namesignup" class="name" data-icon="u">Your name and surname</label>
+                                    <input id="namesignup" name="AdSoyad" required="required" type="text" placeholder="Name and Surname..." />
+                                </p>
+                                <p>
+                                    <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
+                                    <input id="usernamesignup" name="takmaad" required="required" type="text" placeholder="mysuperusername" />
+                                </p>
+
+                                <p>
+                                    <label for="emailsignup" class="youmail" data-icon="e"> Your email</label>
+                                    <input id="emailsignup" name="emaıl" required="required" type="email" placeholder="mysupermail@mail.com" />
+                                </p>
+                                <p>
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+                                    <input id="passwordsignup" name="sıfre" required="required" type="password" placeholder="eg. X8df!90EO" />
+                                </p>
+                                <p>
+                                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO" />
+                                </p>
+                                <p class="signin button">
+                                    <input type="submit" value="Sign up" />
+                                </p>
+                                <p class="change_link">
+                                    Already a member ?
+                                    <a href="#tologin" class="to_register"> Go and log in </a>
+                                </p>
+                            </form>
+                        }
+
                     </div>
 
                 </div>
