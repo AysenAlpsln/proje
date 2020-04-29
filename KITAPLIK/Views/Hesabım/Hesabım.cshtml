@@ -94,7 +94,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="bio">Mini Biyografiniz:</label>
-                                    <input type="text" class="form-control" id="bio">
+                                    <textarea class="form-control" cols="70" id="bio" name="txtAreaBio" rows="10"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-info">Kaydet</button>
                             </form>
@@ -112,14 +112,17 @@
     <div class="container">
         <div class="row content">
             <div class="col-sm-3 sidenav ">
-                <h2>Kullanıcı ismi</h2>
-                
-                <ul class="nav">
-                    <li>Cinsiyet</li>
-                    <li>Doğum Tarihi</li>
-                    <li>Email</li>
-                    <li>Katıldığı tarih</li>
-                </ul><br>
+                @using (Html.BeginForm("Bilgi", "Hesabım", FormMethod.Post))
+                {
+                    <h2>Kullanıcı ismi</h2>
+    
+                    <ul class="nav">
+                        <li>Cinsiyet</li>
+                        <li>Doğum Tarihi</li>
+                        <li>Email</li>
+                        <li>Katıldığı tarih</li>
+                    </ul><br>
+                }
             </div>
             <br>
           

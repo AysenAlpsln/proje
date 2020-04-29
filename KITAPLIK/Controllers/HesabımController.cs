@@ -12,14 +12,20 @@ namespace KITAPLIK.Controllers
         // GET: Hesabım
         KıtapEntities1 db = new KıtapEntities1();
 
-        public ActionResult Hesabım()
+        public ActionResult Hesabım(int id)
         {
             return View();
         }
-        public ActionResult KullanıcıGetir(int id)
+        public ActionResult Bilgi(int id)
         {
-            var kul = db.Uyeler.Find(id);
-            return View("Hesabım", kul);
+            var bilgiler = db.Uyeler.Find(id);
+            if (bilgiler != null)
+            {
+                return View(db.Uyeler.Where(m => m.Uyeıd == id).ToList());
+            }
+            return View();
         }
+        
+        
     }
 }
