@@ -54,16 +54,16 @@
     <div class="container">
         <div class="row content">
             <div class="col-sm-3 sidenav ">
-                
+                @using (Html.BeginForm("Detay", "Hesabım", FormMethod.Post))
+                {
                     <h2>Kullanıcı ismi</h2>
-    
                     <ul class="nav">
                         <li>Cinsiyet</li>
                         <li>Doğum Tarihi</li>
                         <li>Email</li>
                         <li>Katıldığı tarih</li>
                     </ul><br>
-                
+                }
             </div>
             <br>
           

@@ -1,0 +1,88 @@
+﻿@model IEnumerable<KITAPLIK.Models.Entity.Kıtaplar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.kıtapadı)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.acıklama)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.kıtapresım)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.cokokunanlar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.edıtorunsectıklerı)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Anasayfa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surukleyıcıyenılerıcın)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.KıtapDetay.kıtapcevırmenı)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Kutuphanem.kıtapıd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kutuphanem1.kıtapıd)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.kıtapadı)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.acıklama)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.kıtapresım)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.cokokunanlar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.edıtorunsectıklerı)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Anasayfa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surukleyıcıyenılerıcın)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.KıtapDetay.kıtapcevırmenı)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Kutuphanem.kıtapıd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kutuphanem1.kıtapıd)
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.kıtapıd}) |
+            @Html.ActionLink("Details", "Details", new { id=item.kıtapıd }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.kıtapıd })
+        </td>
+    </tr>
+}
+
+</table>

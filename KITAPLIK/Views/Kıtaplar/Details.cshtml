@@ -1,0 +1,81 @@
+﻿@model KITAPLIK.Models.Entity.Kıtaplar
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="color:cornflowerblue">Kitabın Detayları</h2>
+
+<div>
+    <h4 style="color:gold">@Html.DisplayFor(model =>model.kıtapadı)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt style="color:gold">
+            @Html.LabelFor(model => model.kıtapadı,"Kitabın Adı:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kıtapadı)
+        </dd>
+
+        <dt style="color:gold">
+            @Html.LabelFor(model => model.acıklama, "Kitabın Açıklaması:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.acıklama)
+        </dd>
+
+        <dt style="color:gold">
+            @Html.LabelFor(model => model.kıtapresım, "Kitabın Resmi:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kıtapresım)
+        </dd>
+
+        <dt style="color:gold">
+            @Html.LabelFor(model => model.KıtapDetay.kıtapcevırmenı, "Kitabın Çevirmeni:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KıtapDetay.kıtapcevırmenı)
+        </dd>
+
+        <dt style="color:gold">
+            @Html.LabelFor(model => model.KıtapDetay.kıtapbasım, "Basım Tarihi:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KıtapDetay.kıtapbasım)
+        </dd>
+
+        <dt style="color:gold">
+            @Html.LabelFor(model => model.KıtapDetay.kıtapdılı, "Dili:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KıtapDetay.kıtapdılı)
+        </dd>
+        <dt style="color:gold">
+            @Html.LabelFor(model => model.KıtapDetay.kıtapsayfa, "Sayfa Sayısı:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KıtapDetay.kıtapsayfa)
+        </dd>
+        <dt style="color:gold">
+            @Html.LabelFor(model => model.KıtapDetay.kıtapyayınevı, "Yayınevi:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KıtapDetay.kıtapyayınevı)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.kıtapıd} ) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

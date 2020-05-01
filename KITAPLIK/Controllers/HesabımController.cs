@@ -35,7 +35,12 @@ namespace KITAPLIK.Controllers
             db.SaveChanges();
             return RedirectToAction("Hesabım");
         }
-        
+        public ActionResult Detay(int id)
+        {
+            var uye = db.Uyeler.Find(id);
+            ViewData["ad"] = uye.AdSoyad;
+            return View();
+        }        
         
         
     }

@@ -133,6 +133,7 @@
     <Compile Include="Controllers\HesabımController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KesfetController.cs" />
+    <Compile Include="Controllers\KıtaplarController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -313,6 +314,11 @@
     <Content Include="Views\Kesfet\Index.cshtml" />
     <Content Include="Views\Hesabım\Hesabım.cshtml" />
     <Content Include="Views\Hesabım\ProfilGetir.cshtml" />
+    <Content Include="Views\Kıtaplar\Create.cshtml" />
+    <Content Include="Views\Kıtaplar\Delete.cshtml" />
+    <Content Include="Views\Kıtaplar\Details.cshtml" />
+    <Content Include="Views\Kıtaplar\Edit.cshtml" />
+    <Content Include="Views\Kıtaplar\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
