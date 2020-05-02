@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KITAPLIK.Models.Entity;
+using PagedList;
+using PagedList.Mvc;
 
 namespace KITAPLIK.Controllers
 {
@@ -15,10 +17,10 @@ namespace KITAPLIK.Controllers
         private KıtapEntities1 db = new KıtapEntities1();
 
         // GET: Kıtaplar
-        public ActionResult Index()
+        public ActionResult Index(string ara)
         {
             var kıtaplar = db.Kıtaplar.Include(k => k.KıtapDetay).Include(k => k.Kutuphanem).Include(k => k.Kutuphanem1);
-            return View(kıtaplar.ToList());
+            return View(kıtaplar.Where(x => x.kıtapadı.Contains(ara)||ara==null).ToList());
         }
 
         // GET: Kıtaplar/Details/5

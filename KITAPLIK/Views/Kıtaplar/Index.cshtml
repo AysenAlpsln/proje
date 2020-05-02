@@ -4,8 +4,14 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Index</h2>
+<br />
+@using (Html.BeginForm())
+{
+    <label>Kitap Ara:</label>
+    @Html.Editor("ara")
+    <input type="submit" value="Ara" />
+}
+<h2 style="color:cadetblue; font-family:'Italic Outline Art'; font-weight:bold"><i>Kitapları İnceleyin...</i></h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -13,35 +19,11 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.kıtapadı)
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.acıklama)
-        </th>*@
-        <th>
-            @Html.DisplayNameFor(model => model.kıtapresım)
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.cokokunanlar)
+            <label style="color:firebrick; font-family:'Italic Outline Art'; font-size:large">Kitabın Adı</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.edıtorunsectıklerı)
+            <label style="color:firebrick; font-family:'Italic Outline Art'; font-size:large">Kitabın Resmi</label>
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Anasayfa)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Surukleyıcıyenılerıcın)
-        </th>*@
-        <th>
-            @Html.DisplayNameFor(model => model.KıtapDetay.kıtapcevırmenı)
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.Kutuphanem.kıtapıd)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Kutuphanem1.kıtapıd)
-        </th>*@
         <th></th>
     </tr>
 
@@ -50,37 +32,18 @@
         <td>
             @Html.DisplayFor(modelItem => item.kıtapadı)
         </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.acıklama)
-        </td>*@
+        
         <td>
             @Html.DisplayFor(modelItem => item.kıtapresım)
         </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.cokokunanlar)
-        </td>
+        
         <td>
-            @Html.DisplayFor(modelItem => item.edıtorunsectıklerı)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Anasayfa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Surukleyıcıyenılerıcın)
-        </td>*@
-        <td>
-            @Html.DisplayFor(modelItem => item.KıtapDetay.kıtapcevırmenı)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Kutuphanem.kıtapıd)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Kutuphanem1.kıtapıd)
-        </td>*@
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.kıtapıd}) |
-            @Html.ActionLink("Details", "Details", new { id=item.kıtapıd }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.kıtapıd })
+            <a href="/Kıtaplar/Edit/@item.kıtapıd" class="btn btn-info">DÜZENLE</a>
+            <a href="/Kıtaplar/Details/@item.kıtapıd" class="btn btn-primary">DETAY</a>
+            <a href="/Kıtaplar/Delete/@item.kıtapıd" class="btn btn-danger">SİL</a>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.kıtapıd}, new { target = "_blank", name = "link", style = "color : darksalmon" }) |*@
+            @*@Html.ActionLink("Details", "Details", new { id = item.kıtapıd }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.kıtapıd })*@
         </td>
     </tr>
 }

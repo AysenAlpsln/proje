@@ -5,10 +5,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2 style="color:cornflowerblue">Kitabın Detayları</h2>
+<h2 style="color:cornflowerblue; font-family:'Italic Outline Art'; font-weight:bold"><i>Kitabın Detayları</i></h2>
 
 <div>
-    <h4 style="color:gold">@Html.DisplayFor(model =>model.kıtapadı)</h4>
+    <br />
+    <h4 style="color:gold; font-weight:bold" >@Html.DisplayFor(model =>model.kıtapadı)</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt style="color:gold">
@@ -76,6 +77,5 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.kıtapıd} ) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    <a href="/Kıtaplar/Edit/@Model.kıtapıd" class="btn btn-info">GÜNCELLE</a> |
+    <a href="/Kıtaplar/Index/@Model.kıtapıd" class="btn btn-success">LİSTEYE GERİ DÖN</a></p>
