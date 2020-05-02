@@ -4,362 +4,219 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
+    <title>Personal Blog a Blogging Category Flat Bootstarp  Responsive Website Template | Home :: w3layouts</title>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-        /* Remove the navbar's default rounded borders and increase the bottom margin */
-        .navbar {
-            margin-bottom: 50px;
-            border-radius: 0;
-        }
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!----webfonts---->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+    <!----//webfonts---->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--end slider -->
+    <!--script-->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <!--/script-->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900);
+            });
+        });
+    </script>
+    <!---->
 
-        /* Remove the jumbotron's default bottom margin */
-        .jumbotron {
-            margin-bottom: 50px;
-            ;
-        }
-
-    </style>
 </head>
 <body>
+    <div class="content">
+        <div class="container">
+            <div class="content-grids">
+                <div class="col-md-8 content-main">
+                    <div class="content-grid">
+                        <h1 style="color:midnightblue">Bu Ay En Çok Okunanlar...</h1>
+                        <br />
+                        <h3 style="color:midnightblue">Ne Yorum Yaptılar?</h3>
+                        <div class="content-grid-info">
 
-    <div class="jumbotron">
-        <div class="container text-center">
-            <h1>Okumadan Geçme</h1>
-            <p>Herkesin mutlaka okuması gereken kitaplar...</p>
-        </div>
-    </div>
+                            <br />
+                            <img src="~/web pages/Project Images/ehayvan.jpg" alt="" />
+                            <div class="post-info">
+                                <br />
+                                <h3 style="color:#800000"> <u> <b> Hayvan Çiftliği </b></u> </h3>
+                                </br>
+                                <b>
+                                    "Bu kitap, masalsı anlatımıyla (biraz hayal ürünü elbetteki) takdire şayan bir şekilde açıklamış politik oyunları.
+                                    Hayvanların birbirine yoldaş diye seslenmesi Stalin dönemine açık bir gönderme.<span id="dots">...</span><span id="more">
+                                        Din de dahil olmak üzere hayvanların duygusal yönden sömürülmesi ustaca işlenmiş. Tabii buradaki hayvanlar kurgu gereği insanları simgelemektedir.
+                                        Eşitlik ve adalet parolasıyla yola çıkanların yönetimi ele geçirdikçe yavaş yavaş kanunları nasıl kendi istedikleri gibi çevirdiklerini görünce acınası bir tebessüm kapladı yüzümü.
+                                        (George Orwell 1903-1950) zira yazar bu kitabı epey önceleri yazmış olmasına rağmen, politik entrikaların hem dününe, hem de yarınına ışık tutuyor. Çünkü eminim ki aynı sahtekârlıklar
+                                        insanlık var olduğu sürece yapılacak."
+                                        -Burak Velioğlu
+                                    </span>
+                                </b>
+                                </br>
+                                <button onclick="myFunction()" id="myBtn">Read more</button>
 
+                                <script>
+                                    function myFunction() {
+                                        var dots = document.getElementById("dots");
+                                        var moreText = document.getElementById("more");
+                                        var btnText = document.getElementById("myBtn");
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Kürk Mantolu Madonna</div>
-                    <div class="panel-body"><img src="~/img/madonna.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                    <div class="panel-footer">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
-                            İçerik için tıklayınız
-                        </button>
+                                        if (dots.style.display === "none") {
+                                            dots.style.display = "inline";
+                                            btnText.innerHTML = "Read more";
+                                            moreText.style.display = "none";
+                                        } else {
+                                            dots.style.display = "none";
+                                            btnText.innerHTML = "Read less";
+                                            moreText.style.display = "inline";
+                                        }
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                        </br>
+                        <div class="content-grid-info">
+                            <img src="~/web pages/Project Images/ekmm.jpg" alt="" />
+                            <div class="post-info">
+                                <br />
+                                <h3 style="color:#800000"> <u> <b>Kürk Mantolu Madonna </b></u> </h3>
+                                </br>
+                                <b>
+                                    Bazı çeviri kitaplar okuduktan sonra okuduğum ilk aslı Türkçe kitaptı. Daha ilk sayfalarından evet yazar benim memleketimden dedim.<span id="dotss">...</span><span id="moree">
+                                        Hikayemiz iş arayan bir adam ile başlıyor. Adamımız kendisi anlatıyor başından geçenleri. Bu süreçte fark ediyoruz ki, oldukça iyi gözlem yapan ve kendisini ve insanları iyi tanıyan biri. Raif Efendi isminde bir insanla tanışmasının başına gelen en ilginç olaylardan olduğunu söyleyerek meraklandırıyor. Raif efendi Gogol'un Palto kitabındaki ana kahramanimız Akaki'ye oldukça benzer bir karakter. Anlatıcıyı ve anlatılanı daha fazla tanıma isteğiniz zaten kitabı okutacaktır.
+                                        İnsanlar arasındaki ilişkileri ve fikirleri çok iyi yorumlayan bir kitap okumak isterseniz öneriyorum.
+                                        Bu bahsi geçenler kitabın ilk 20 sayfasında fark edeğiniz bilgiler olduğundan, yazdıklarımı mazur göreceğinizi umuyorum
+                                        -Yavuzhan Tepekbaşı
+                                    </span>
+                                </b>
+                                </br>
+                                <button onclick="myFunctionn()" id="myBtnn">Read more</button>
 
-                        <div class="modal" id="Modal1">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title">Kitap Hakkında</h2>
-                                    </div>
-                                    <br />
-                                    <form>
-                                        <div class="modal-body">
-                                            <h7 class="modal-title" style="text-align">
-                                                Sabahattin Ali – Eserin ana fikri ile ilgili düşüncelerini bu sözlerle belirtmiştir:
-                                                ”Dünya’nın en basit, en zavallı, hatta en ahmak adamı bile, insanı hayretten hayrete düşürecek ne müthiş ve karışık bir ruha maliktir!... Niçin bunu anlamaktan bu kadar kaçıyor ve insan dedikleri mahluku anlaşılması ve hakkında hüküm verilmesi en kolay şeylerden biri zannediyoruz?”
-                                                1998’ten bu yana YKY (Yapı Kredi Yayınları) tarafından basılan kitap müthiş bir satış başarısı yakalayan ve ilk basımı 1943 yılında Remzi Kitabevi’nden çıkan “Kürk Mantolu Madonna”,  kitap olarak basılmadan önce 1941 yılında 48 bölüm halinde “Hakikat” gazetesinde “Büyük Hikaye” başlığı altında yayımlanmıştır.
-                                                Sabahattin Ali, Büyükdere’de ikinci kez askerliğini yaptığı dönemde sol bileğini sakatlamasına rağmen romanı yazmaya devam etmiştir.
-                                                Kitap 73 yıl sonra 2016 yılında İngilizceye çevrilerek “Modern Klasikler” serisi adı altında “Madonna In A Fur Coat” ismiyle Penguin yayınları tarafından yayımlanmıştır. Kitabın İngilizceye çevirisini “Maureen Freely” ve “Alexander Dave” gerçekleştirmiştir.
-                                                Hep başkalarının istediği gibi yaşayan Raif Efendi, memnuniyetsiz hayatının tek bir anıyla değiştiğine şahit olacaktır: Maria Puder isminde bir kadına âşık olduğunda... Babasının isteğiyle Berlin’e giden ve oradaki bir sanat galerisinde hayran kaldığı bir tabloyla karşılaşan Raif Efendi, tabloda resmedilen kadın portresinin  Andrea Del Sarto tarafından resmedilmiş "Madonna delle Arpie" adlı tablodaki Meryem Ana (Madonna) tasvirine benzediğini düşünür. Raif Efendi, daha sonra takıntı derecesinde hayran olduğu tablodaki yüzün sahibiyle karşılaşacaktır.
-                                                Madonna ismi, Orta-Çağ İtalyancasında “ma donna” öbeğinden gelmektedir. “Ma donna”, kısaca “leydim” anlamına gelir ve Hz. Meryem’in sıfatlarından biridir.
-                                            </h7>
-                                            <br />
-                                            <br />
-                                            <button class="btn btn-danger"> Kapat </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="panel panel-danger">
-                    <div class="panel-heading">Fareler ve İnsanlar</div>
-                    <div class="panel-body"><img src="~/img/fare.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                    <div class="panel-footer">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal2">
-                            İçerik için tıklayınız
-                        </button>
-                        <div class="modal" id="Modal2">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title">Kitap Hakkında</h2>
-                                    </div>
-                                    <br />
-                                    <form>
-                                        <div class="modal-body">
-                                            <h7 class="modal-title" style="text-align">
-                                                Pulitzer ve Nobel Edebiyat Ödülü'nü kazanan John Steinbeck'in çağımızın toplumsal ve insani meselelerini ustalıkla resmettiği eserleri modern dünya edebiyatının başyapıtları arasında yer alır. Steinbeck romanlarında yalın ve keskin bir gerçeklik sunarken yine de her seferinde çarpıcı bir öykü ile çıkar okurunun karşısına. Tarihin bir kesitindeki dramı insani ayrıntıları kaçırmadan sergilerken, "tozpembe olmayan gerçekçi bir umudun" türküsünü dillendirir. Bu nedenle eserleri edebi değerleri kadar güncelliklerini de hiç yitirmemiştir.
-                                                Fareler ve İnsanlar, birbirine zıt karakterdeki iki mevsimlik tarım işçisinin, zeki George Milton ve onun güçlü kuvvetli ama akli dengesi bozuk yoldaşı Lennie Small'un öyküsünü anlatır. Küçük bir toprak satın alıp insanca bir hayat yaşamanın hayalini kuran bu ikilinin öyküsünde dostluk ve dayanışma duygusu önemli bir yer tutar. Steinbeck insanın insanla ilişkisini anlatmakla kalmaz insanın doğayla ve toplumla kurduğu ilişkileri de konu eder bu destansı romanında. Kitabın ismine ilham veren Robert Burns şiirindeki gibi; "En iyi planları farelerin ve insanların / Sıkça ters gider..."
-                                            </h7>
-                                            <br />
-                                            <br />
-                                            <button class="btn btn-danger"> Kapat </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="panel panel-success">
-                    <div class="panel-heading">Küçük Prens</div>
-                    <div class="panel-body"><img src="~/img/prens.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                    <div class="panel-footer">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal3">
-                            İçerik için tıklayınız
-                        </button>
-                        <div class="modal" id="Modal3">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title">Kitap Hakkında</h2>
-                                    </div>
-                                    <br />
-                                    <form>
-                                        <div class="modal-body">
-                                            <h7 class="modal-title" style="text-align">
-                                                Antoine de Saint-Exupéry tarafından New York'ta bir otel odasında yazılan Küçük Prens, yayımlandığı günden bu yana milyonlarca insanın kalbini fethetmeye devam ediyor. Küçük Prens'in yaşadıklarını anlıyor, kırgınlıklarına üzülüyor, söylediklerine hak veriyoruz. Gezegenindeki çiçeğiyle pek anlaşamadığı için biraz uzaklaşmaya karar veren, yolculuğu sırasında Dünya'ya da uğrayan Küçük Prens, Sahra Çölü'nde bir pilotla karşılaşır. İşte olan biteni de bu pilot anlatır bize. Kimdir Küçük Prens, neden sürekli sorular sorar, çiçeğiyle neden anlaşamamıştır, gittiği diğer gezegenlerde kimlerle karşılaşmıştır ve neler öğrenmiştir?
-                                                Bu öyküyü dinlerken Küçük Prens'in yaşadıkları ve öğrendikleri sayesinde hayatımıza tekrar bakıyoruz ve yaşamı anlamlandırmada "ne kadar da büyüdüğümüzü" görüyoruz. Küçük Prens'in de dediği gibi "Büyüklere her şeyi açıklamak gerekir zaten."
-                                            </h7>
-                                            <br />
-                                            <br />
-                                            <button class="btn btn-danger"> Kapat </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><br>
+                                <script>
+                                    function myFunctionn() {
+                                        var dotss = document.getElementById("dotss");
+                                        var moreText = document.getElementById("moree");
+                                        var btnText = document.getElementById("myBtnn");
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Hayvan Çiftliği</div>
-                    <div class="panel-body"><img src="~/img/hayvan.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                    <div class="panel-footer">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal4">
-                            İçerik için tıklayınız
-                        </button>
-                        <div class="modal" id="Modal4">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title">Kitap Hakkında</h2>
-                                    </div>
-                                    <br />
-                                    <form>
-                                        <div class="modal-body">
-                                            <h7 class="modal-title" style="text-align">
-                                                Asıl adı Eric Arthur Blair olan İngiliz yazar George Orwell’ın siyasi hiciv tarzındaki kısa öyküsü Hayvan Çiftliği 1945 yılında yayımlanmıştır. Eser, alegorik açıdan zengin bir eserdir ve Sovyetler Birliği, Nazi Almanyası gibi totaliter rejimleri mizahî bir dille eleştirmektedir. Hayvan Çiftliği, özet olarak Stalinizmi yerden yere vururken Sovyetler’in kuruluşundan bu yana gerçekleşen olayları hicveder.
-                                                Hayvan Çiftliği eserinde adı geçen karakterlerin büyük bir kısmı domuz, kuzgun, köpek gibi hayvanlardır ve bu hayvanlar Stalin, Lenin, Marx gibi tarihî kişilerin alegorisi niteliğindedir.
-                                                Kitabın ilk çevirisi saygıdeğer Halide Edip Adıvar tarafından tercüme edilmiştir. Kitabın günümüzdeki baskısı Celal Üster’in çevirisi ve Can Yayınları’nın özenli çalışmasıyla okuyuculara sunulmaktadır. Kitabın 2016 Türkçe baskısındaki kapak tasarımı değerli sanatçı Utku Lomlu’ya aittir.
-                                                George Orwell Hayvan Çiftliği kitabı, yıllardır olduğu gibi bugün de pek çok okulda okutulmaktadır. Kitap, sürükleyici ve mizahi diliyle okurları büyülemeye devam etmektedir.
-                                                Romanın 1954 ve 1999 yıllarında çizgi film versiyonları gösterime girmiştir. Roman, ayrıca İngiliz Progresif Rock grubu Pink Floyd’un 1977 tarihli “Animals” adlı albümünün konseptine ilham kaynağı olmuştur.
-                                            </h7>
-                                            <br />
-                                            <br />
-                                            <button class="btn btn-danger"> Kapat </button>
-                                        </div>
-                                    </form>
-                                </div>
+                                        if (dotss.style.display === "none") {
+                                            dotss.style.display = "inline";
+                                            btnText.innerHTML = "Read more";
+                                            moreText.style.display = "none";
+                                        } else {
+                                            dotss.style.display = "none";
+                                            btnText.innerHTML = "Read less";
+                                            moreText.style.display = "inline";
+                                        }
+                                    }
+                                </script>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Satranç</div>
-                    <div class="panel-body"><img src="~/img/satranc.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                    <div class="panel-footer">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal5">
-                            İçerik için tıklayınız
-                        </button>
-                        <div class="modal" id="Modal5">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title">Kitap Hakkında</h2>
-                                    </div>
-                                    <br />
-                                    <form>
-                                        <div class="modal-body">
-                                            <h7 class="modal-title" style="text-align">
-                                                Stefan Zweig, çok geniş bir psikoloji birikimini eserlerinde bütünüyle kullanmış ender yazarlardandır. Onun dünya edebiyatında bir biyografi yazarı olarak kazandığı haklı ünün temelinde de bu özelliği, yani yazarlığının yanı sıra çok usta bir psikolog olması yatar.
-                                                Satranç, Zweig'ın psikolojik birikimini bütünüyle devreye soktuğu bir öyküdür ve bu öykünün baş kişileri, tamamen yazarın biyografilerinde ele aldığı kişileri işleyiş biçimiyle sergilenmiştir.
-                                                Zweig ölümünden hemen önce tamamladığı birkaç düzyazı metinden biri olan Satranç'ı kaleme aldığı sırada, karısı Lotte Zweig ile birlikte göç ettiği Brezilya'da yaşamaktaydı. Satranç'ta da, olay yeri olarak New York'dan Buenos Aires'e gitmekte olan bir yolcu gemisini seçmiştir. Bu gemide tamamen rastlantı sonucu karşılaşan üç kişi: yeni dünya satranç şampiyonu Mirko Czentovic, sıradan bir satranç oyuncusu olan anlatıcı ve bir zamanlar çok usta bir satranç oyuncusu olan, ama hayli zamandır satrançtan uzak kalmış bulunan Dr. B., öykünün aktörleridir.
-                                            </h7>
-                                            <br />
-                                            <br />
-                                            <button class="btn btn-danger"> Kapat </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </br>
+                        <div class="content-grid-info">
+                            <img src="~/web pages/Project Images/eesatranc.jpg" alt="" />
+                            <div class="post-info">
+                                <br />
+                                <h3 style="color:#800000"> <u> <b> Satranç </b></u> </h3>
+                                </br>
+                                <b>
+                                    Satranç, başlangıçta Dr. B‘nin ruhunu canlandıran ve zamanını doldurup onu eğlendiren bir oyun olarak oynanıyor. Ancak oyundan alınan zevk, zamanla aşama aşama önce oyun dürtüsüne, sonra da çılgınlığa dönüşüyor. <span id="dotsss">...</span><span id="moreee">
+                                        Ve nihayet “yalnızca uyanık olduğu saatleri ele geçirmekle kalmayıp yavaş yavaş Dr. B’nin uykularına da sızan tutkulu bir öfke” hâlini alıyor.
+                                        Eseri okurken, böylesine tutkulu bir öfkeyle, Avrupa‘yı yangın yerine çeviren Hitler‘in, sadece kazanmaya ve yenmeye endeksli hırsı ve öfkesi arasında bağ kurmak, kaçınılmaz oluyor.
+                                        Ya da bu öfke size, “önüne çıkan bütün engelleri devirerek yol almaya alışmış, en önemsiz oyunda bile yenilmeyi kişiliğine yapılmış bir hakaret olarak kabul eden” insanları hatırlatıyor.
+                                        Ayrıca “başarılarından dolayı şımaran ve kendisini fazlasıyla kaptırdığı üstünlük düşüncesi yüzünden ona karşı koyulmasını kendisine karşı haksız bir ayaklanma ve neredeyse hakaret olarak algılayan”
+                                        insanların düştüğü durumla ilgili belli bir fikir veriyor. -Gülsüm Şule Bayraktar
+                                    </span>
+                                </b>
+                                </br>
+                                <button onclick="myFunctionnn()" id="myBtnnn">Read more</button>
 
-            <div class="col-sm-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Uçurtma Avcısı</div>
-                    <div class="panel-body"><img src="~/img/ucurtma.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                    <div class="panel-footer">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal6">
-                            İçerik için tıklayınız
-                        </button>
-                        <div class="modal" id="Modal6">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title">Kitap Hakkında</h2>
-                                    </div>
-                                    <br />
-                                    <form>
-                                        <div class="modal-body">
-                                            <h7 class="modal-title" style="text-align">
-                                                Emir ve Hasan, Kabil'de monarşinin son yıllarında birlikte büyüyen iki çocuk... Aynı evde büyüyüp, aynı sütanneyi paylaşmalarına rağmen Emir'le Hasan'ın dünyaları arasında uçurumlar vardır: Emir, ünlü ve zengin bir işadamının, Hasan ise onun hizmetkârının oğludur. Üstelik Hasan, orada pek sevilmeyen bir etnik azınlığa, Hazaralara mensuptur.
-                                                Çocukların birbirleriyle kesişen yaşamları ve kaderleri, çevrelerindeki dünyanın trajedisini yansıtır. Sovyetler işgali sırasında Emir ve babası ülkeyi terk edip California'ya giderler. Emir böylece geçmişinden kaçtığını düşünür. Her şeye rağmen arkasında bıraktığı Hasan'ın hatırasından kopamaz.
-                                                Uçurtma Avcısı arkadaşlık, ihanet ve sadakatin bedeline ilişkin bir roman. Babalar ve oğullar, babaların oğullarına etkileri, sevgileri, fedakârlıkları ve yalanları... Daha önce hiçbir romanda anlatılmamış bir tarihin perde arkasını yansıtan Uçurtma Avcısı, zengin bir kültüre ve güzelliğe sahip toprakların yok edilişini aşama aşama gözler önüne seriyor.
-                                                Uçurtma Avcısı'nda anlatılan olağanüstü bir dostluk. Bir insanın diğerini ne kadar sevebileceğinin su gibi akıp giden öyküsü...
-                                            </h7>
-                                            <br />
-                                            <br />
-                                            <button class="btn btn-danger"> Kapat </button>
-                                        </div>
-                                    </form>
-                                </div>
+                                <script>
+                                    function myFunctionnn() {
+                                        var dotsss = document.getElementById("dotsss");
+                                        var moreText = document.getElementById("moreee");
+                                        var btnText = document.getElementById("myBtnnn");
+
+                                        if (dotsss.style.display === "none") {
+                                            dotsss.style.display = "inline";
+                                            btnText.innerHTML = "Read more";
+                                            moreText.style.display = "none";
+                                        } else {
+                                            dotsss.style.display = "none";
+                                            btnText.innerHTML = "Read less";
+                                            moreText.style.display = "inline";
+                                        }
+                                    }
+                                </script>
+
                             </div>
                         </div>
+
                     </div>
                 </div>
-            </div>
-        </div>
-    </div><br><br>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Bülbülü Öldürmek</div>
-                    <div class="panel-body"><img src="~/img/bulbul.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                    <div class="panel-footer">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal7">
-                            İçerik için tıklayınız
-                        </button>
-                        <div class="modal" id="Modal7">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title">Kitap Hakkında</h2>
-                                    </div>
-                                    <br />
-                                    <form>
-                                        <div class="modal-body">
-                                            <h7 class="modal-title" style="text-align">
-                                                1960 yılında yayımlandığından bu yana bütün edebiyat severlerin gönlünde özel bir yer edinen, Pulitzer ödüllü Bülbülü Öldürmek Amerika’nın güneyinde yaşanan ırkçılığı ve eşitsizliği bir çocuk kahramanın, Scout Finch’in gözünden anlatıyor.
-                                                Harper Lee, kullandığı yalın ama çarpıcı dil aracılığıyla adalet, özgürlük, eşitlik ve ayrımcılık gibi hâlâ güncel temaları, Scout’un büyüyüş öyküsüyle birlikte dokuyarak, iyilik ve kötülüğü hem bireysel hem de toplumsal düzeyde mercek altına alıyor.
-                                                Bir “zenci”nin haksız yere suçlanması üzerinden gelişen olaylar; önyargılar, riyakârlık, sınıf ve ırk çatışmalarıyla beslenen küçük Amerikan kasabasının sınırlarını aşıp, insanlar arası ilişkide adaletin ve dürüstlüğün önemini anlatan evrensel bir hikâyeye dönüşüyor. Etkileyici gerçekliğiyle ürperten, “insani” vurgusuyla sarıp sarmalayan, çağdaş dünya edebiyatının en önemli örneklerinden biri olan bu klasik roman, Ülker İnce çevirisiyle tekrar Türkçede.
-                                                "İstediğin kadar saksağanı vur vurabilirsen ama unutma, bülbülü öldürmek günahtır."
-                                            </h7>
-                                            <br />
-                                            <br />
-                                            <button class="btn btn-danger"> Kapat </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-md-4 content-right">
+                    <div class="recent">
+                        <h3>SON GÖNDERİLER</h3>
+                        <ul>
+                            <li><a href="#">Aliquam tincidunt mauris</a></li>
+                            <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
+                            <li><a href="#">Nunc dignissim risus consecu</a></li>
+                            <li><a href="#">Cras ornare tristiqu</a></li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Kuyucaklı Yusuf</div>
-                    <div class="panel-body"><img src="~/img/yusuf.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                    <div class="panel-footer">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal8">
-                            İçerik için tıklayınız
-                        </button>
-                        <div class="modal" id="Modal8">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title">Kitap Hakkında</h2>
-                                    </div>
-                                    <br />
-                                    <form>
-                                        <div class="modal-body">
-                                            <h7 class="modal-title" style="text-align">
-                                                İlk Basımı 1937 yılında “Yeni Kitapçı” tarafından basılan roman, Sabahattin Ali’nin roman türünde ilk eseridir. Öykü yazarı olan Ali’nin bu eseri MEB Ortaöğretim 100 Temel Eser Listesinde yer almaktadır.
-                                                YKY tarafından ilk olarak 1999 yılında basılan roman günümüzde YKY (Yapı Kredi Yayınları) tarafından basılmaya devam edilmektedir. Kitabın editörlüğü Ayfer Tunç, yeni kapak tasarımı ise “Nahide Dikel” tarafından yapılmıştır.
-                                                1985 yılında Sinema filmine uyarlanan romanın filminde Talat Bulut, Derya Arbaş ve Ahmet Mekin’in rol almış, filmin yönetmenliğini ise “Feyzi Tuna” üstlenmiştir.
-                                                Kuyucaklı Yusuf konusu itibariyle ailesinin katledilmesiyle sahipsiz kalan dokuz yaşındaki Yusuf’un olayı soruşturmak için Kuyucak’a gelen Nazilli Kaymakamı Selahattin Bey tarafından evlatlık alınması ve çocuğun daha sonraki hayatı anlatılmaktadır. Edebiyat eleştirmenlerine göre Yusuf karakteri, köyden şehre göç edip şehir hayatına uyum sağlayamayan insan tipinin habercisi olarak değerlendirilmektedir.
-                                            </h7>
-                                            <br />
-                                            <br />
-                                            <button class="btn btn-danger"> Kapat </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                    </br>
+                    </br>
+                    <div class="comments">
+                        <h3>SON YORUMLAR</h3>
+                        <ul>
+                            <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
+                            <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
+                            <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Serenad</div>
-                    <div class="panel-body"><img src="~/img/serenad.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                    <div class="panel-footer">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal9">
-                            İçerik için tıklayınız
-                        </button>
-                        <div class="modal" id="Modal9">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title">Kitap Hakkında</h2>
-                                    </div>
-                                    <br />
-                                    <form>
-                                        <div class="modal-body">
-                                            <h7 class="modal-title" style="text-align">
-                                                Roman okumak istiyorsanız...
-                                                Her şey, 2001 yılının Şubat ayında soğuk bir gün, İstanbul Üniversitesi'nde halkla ilişkiler görevini yürüten Maya Duran'ın (36) ABD'den gelen Alman asıllı Profesör Maximilian Wagner'i (87) karşılamasıyla başlar.
-                                                1930'lu yıllarda İstanbul Üniversitesi'nde hocalık yapmış olan profesörün isteği üzerine, Maya bir gün onu Şile'ye götürür. Böylece, katları yavaş yavaş açılan dokunaklı bir aşk hikâyesine karışmakla kalmaz, dünya tarihine ve kendi ailesine ilişkin birtakım sırları da öğrenir.
-                                                Serenad, 60 yıldır süren bir aşkı ele alırken, ister herkesin bildiği Yahudi Soykırımı olsun isterse çok az kimsenin bildiği Mavi Alay, bütün siyasi sorunlarda asıl harcananın, gürültüye gidenin hep insan olduğu gerçeğini de göz önüne seriyor.
-                                                Okurunu sımsıkı kavrayan Serenad'da Zülfü Livaneli'nin romancılığının en temel niteliklerinden biri yine başrolde: İç içe geçmiş, kaynaşmış kişisel ve toplumsal tarihlerin kusursuz Dengesi.
-                                            </h7>
-                                            <br />
-                                            <br />
-                                            <button class="btn btn-danger"> Kapatma </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                    </br>
+                    </br>
+                    <div class="clearfix"></div>
+                    <div class="archives">
+                        <h3>ARŞİVLER</h3>
+                        <ul>
+                            <li><a href="#">Ocak 20220</a></li>
+                            <li><a href="#">Şubat 2020</a></li>
+                            <li><a href="#">Mart 2020</a></li>
+                            <li><a href="#">Nisan 2020</a></li>
+                        </ul>
                     </div>
+                    </br>
+                    </br>
+                    <div class="categories">
+                        <h3>KATEGORİLER</h3>
+                        <ul>
+                            <li><a href="#">Vivamus vestibulum nulla</a></li>
+                            <li><a href="#">Integer vitae libero ac risus e</a></li>
+                            <li><a href="#">Vestibulum commo</a></li>
+                            <li><a href="#">Cras iaculis ultricies</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
+                <div class="clearfix"></div>
             </div>
         </div>
     </div>
-
+    <br />
+    
 </body>
 </html>
+
+
 

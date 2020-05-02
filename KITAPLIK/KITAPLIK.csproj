@@ -289,9 +289,12 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="web pages\Project Images\eesatranc.jpg" />
     <Content Include="web pages\Project Images\3596_8077_keep-calm-and-read-books-1500-1500.jpg" />
     <Content Include="web pages\Project Images\background.jpg" />
     <Content Include="web pages\Project Images\book.jpg" />
+    <Content Include="web pages\Project Images\ehayvan.jpg" />
+    <Content Include="web pages\Project Images\ekmm.jpg" />
     <Content Include="web pages\Project Images\event-tickets.jpg" />
     <Content Include="web pages\Project Images\facebook.png" />
     <Content Include="web pages\Project Images\google.png" />
