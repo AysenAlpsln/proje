@@ -27,9 +27,6 @@ namespace KITAPLIK.Models.Entity
         public string acıklama { get; set; }
         public string kıtapresım { get; set; }
         public Nullable<bool> cokokunanlar { get; set; }
-        public Nullable<bool> edıtorunsectıklerı { get; set; }
-        public Nullable<bool> Anasayfa { get; set; }
-        public Nullable<bool> Surukleyıcıyenılerıcın { get; set; }
     
         public virtual KıtapDetay KıtapDetay { get; set; }
         public virtual Kutuphanem Kutuphanem { get; set; }

@@ -40,9 +40,6 @@
           <Property Name="acıklama" Type="nvarchar(max)" Nullable="false" />
           <Property Name="kıtapresım" Type="varchar" MaxLength="100" />
           <Property Name="cokokunanlar" Type="bit" />
-          <Property Name="edıtorunsectıklerı" Type="bit" />
-          <Property Name="Anasayfa" Type="bit" />
-          <Property Name="Surukleyıcıyenılerıcın" Type="bit" />
         </EntityType>
         <EntityType Name="KıtapYazar">
           <Key>
@@ -60,7 +57,6 @@
           <Property Name="uyeıd" Type="int" Nullable="false" />
           <Property Name="okuyacaklarım" Type="bit" />
           <Property Name="okuduklarım" Type="bit" />
-          <Property Name="begendiklerim" Type="bit" />
           <Property Name="yorumlarııd" Type="int" />
         </EntityType>
         <EntityType Name="Uyeler">
@@ -316,9 +312,6 @@
           <Property Name="acıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="kıtapresım" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="cokokunanlar" Type="Boolean" />
-          <Property Name="edıtorunsectıklerı" Type="Boolean" />
-          <Property Name="Anasayfa" Type="Boolean" />
-          <Property Name="Surukleyıcıyenılerıcın" Type="Boolean" />
           <NavigationProperty Name="KıtapDetay" Relationship="Self.FK_KıtapDetay_Kıtaplar" FromRole="Kıtaplar" ToRole="KıtapDetay" />
           <NavigationProperty Name="Kutuphanem" Relationship="Self.FK_Kutuphanem_Kıtaplar" FromRole="Kıtaplar" ToRole="Kutuphanem" />
           <NavigationProperty Name="Kutuphanem1" Relationship="Self.FK_Kutuphanem_Kıtaplar1" FromRole="Kıtaplar" ToRole="Kutuphanem" />
@@ -334,7 +327,6 @@
           <Property Name="uyeıd" Type="Int32" Nullable="false" />
           <Property Name="okuyacaklarım" Type="Boolean" />
           <Property Name="okuduklarım" Type="Boolean" />
-          <Property Name="begendiklerim" Type="Boolean" />
           <Property Name="yorumlarııd" Type="Int32" />
           <NavigationProperty Name="Kıtaplar" Relationship="Self.FK_Kutuphanem_Kıtaplar" FromRole="Kutuphanem" ToRole="Kıtaplar" />
           <NavigationProperty Name="Kıtaplar1" Relationship="Self.FK_Kutuphanem_Kıtaplar1" FromRole="Kutuphanem" ToRole="Kıtaplar" />
@@ -551,10 +543,7 @@
                 <ScalarProperty Name="acıklama" ColumnName="acıklama" />
                 <ScalarProperty Name="kıtapresım" ColumnName="kıtapresım" />
                 <ScalarProperty Name="cokokunanlar" ColumnName="cokokunanlar" />
-                <ScalarProperty Name="edıtorunsectıklerı" ColumnName="edıtorunsectıklerı" />
-                <ScalarProperty Name="Anasayfa" ColumnName="Anasayfa" />
-                <ScalarProperty Name="Surukleyıcıyenılerıcın" ColumnName="Surukleyıcıyenılerıcın" />
-              </MappingFragment>
+                </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Kutuphanem">
@@ -564,7 +553,6 @@
                 <ScalarProperty Name="uyeıd" ColumnName="uyeıd" />
                 <ScalarProperty Name="okuyacaklarım" ColumnName="okuyacaklarım" />
                 <ScalarProperty Name="okuduklarım" ColumnName="okuduklarım" />
-                <ScalarProperty Name="begendiklerim" ColumnName="begendiklerim" />
                 <ScalarProperty Name="yorumlarııd" ColumnName="yorumlarııd" />
               </MappingFragment>
             </EntityTypeMapping>
