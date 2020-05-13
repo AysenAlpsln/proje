@@ -71,7 +71,6 @@
           <Property Name="DogumYeri" Type="nvarchar" MaxLength="50" />
           <Property Name="DogumTarıhı" Type="smalldatetime" />
           <Property Name="emaıl" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
           <Property Name="Meslegi" Type="nvarchar(max)" />
           <Property Name="YasadıgıSehir" Type="nvarchar" MaxLength="50" />
           <Property Name="Biografi" Type="nvarchar(max)" />
@@ -342,7 +341,6 @@
           <Property Name="Cınsıyet" Type="Boolean" />
           <Property Name="DogumTarıhı" Type="DateTime" Precision="0" />
           <Property Name="emaıl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Kutuphanem" Relationship="Self.FK_Kutuphanem_Uyeler" FromRole="Uyeler" ToRole="Kutuphanem" />
           <NavigationProperty Name="Yorum" Relationship="Self.FK_Yorum_Uyeler" FromRole="Uyeler" ToRole="Yorum" />
           <Property Name="DogumYeri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -553,7 +551,6 @@
                 <ScalarProperty Name="Cınsıyet" ColumnName="Cınsıyet" />
                 <ScalarProperty Name="DogumTarıhı" ColumnName="DogumTarıhı" />
                 <ScalarProperty Name="emaıl" ColumnName="emaıl" />
-                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

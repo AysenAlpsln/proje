@@ -21,7 +21,6 @@ namespace KITAPLIK.Models.Entity
         public Nullable<int> yorumlarııd { get; set; }
     
         public virtual Kıtaplar Kıtaplar { get; set; }
-        public virtual Kıtaplar Kıtaplar1 { get; set; }
         public virtual Uyeler Uyeler { get; set; }
         public virtual Yorum Yorum { get; set; }
     }
