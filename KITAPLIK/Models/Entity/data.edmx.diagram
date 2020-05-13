@@ -14,7 +14,6 @@
         <EntityTypeShape EntityType="KıtapModel.Yorum" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
         <AssociationConnector Association="KıtapModel.FK_KıtapDetay_Kıtaplar" ManuallyRouted="false" />
         <AssociationConnector Association="KıtapModel.FK_Kutuphanem_Kıtaplar" ManuallyRouted="false" />
-        <AssociationConnector Association="KıtapModel.FK_Kutuphanem_Kıtaplar1" ManuallyRouted="false" />
         <AssociationConnector Association="KıtapModel.FK_Yorum_Kıtaplar" ManuallyRouted="false" />
         <AssociationConnector Association="KıtapModel.FK_Kutuphanem_Uyeler" ManuallyRouted="false" />
         <AssociationConnector Association="KıtapModel.FK_Kutuphanem_Yorum" ManuallyRouted="false" />

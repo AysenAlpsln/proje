@@ -314,7 +314,6 @@
           <Property Name="cokokunanlar" Type="Boolean" />
           <NavigationProperty Name="KıtapDetay" Relationship="Self.FK_KıtapDetay_Kıtaplar" FromRole="Kıtaplar" ToRole="KıtapDetay" />
           <NavigationProperty Name="Kutuphanem" Relationship="Self.FK_Kutuphanem_Kıtaplar" FromRole="Kıtaplar" ToRole="Kutuphanem" />
-          <NavigationProperty Name="Kutuphanem1" Relationship="Self.FK_Kutuphanem_Kıtaplar1" FromRole="Kıtaplar" ToRole="Kutuphanem" />
           <NavigationProperty Name="Yorum" Relationship="Self.FK_Yorum_Kıtaplar" FromRole="Kıtaplar" ToRole="Yorum" />
           <NavigationProperty Name="Kategorıler" Relationship="Self.KıtapKategorı" FromRole="Kıtaplar" ToRole="Kategorıler" />
           <NavigationProperty Name="yazarlar" Relationship="Self.KıtapYazar" FromRole="Kıtaplar" ToRole="yazarlar" />
@@ -329,7 +328,6 @@
           <Property Name="okuduklarım" Type="Boolean" />
           <Property Name="yorumlarııd" Type="Int32" />
           <NavigationProperty Name="Kıtaplar" Relationship="Self.FK_Kutuphanem_Kıtaplar" FromRole="Kutuphanem" ToRole="Kıtaplar" />
-          <NavigationProperty Name="Kıtaplar1" Relationship="Self.FK_Kutuphanem_Kıtaplar1" FromRole="Kutuphanem" ToRole="Kıtaplar" />
           <NavigationProperty Name="Uyeler" Relationship="Self.FK_Kutuphanem_Uyeler" FromRole="Kutuphanem" ToRole="Uyeler" />
           <NavigationProperty Name="Yorum" Relationship="Self.FK_Kutuphanem_Yorum" FromRole="Kutuphanem" ToRole="Yorum" />
         </EntityType>
@@ -385,18 +383,6 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Kutuphanem_Kıtaplar">
-          <End Role="Kıtaplar" Type="Self.Kıtaplar" Multiplicity="1" />
-          <End Role="Kutuphanem" Type="Self.Kutuphanem" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Kıtaplar">
-              <PropertyRef Name="kıtapıd" />
-            </Principal>
-            <Dependent Role="Kutuphanem">
-              <PropertyRef Name="kıtapıd" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Kutuphanem_Kıtaplar1">
           <End Role="Kıtaplar" Type="Self.Kıtaplar" Multiplicity="1" />
           <End Role="Kutuphanem" Type="Self.Kutuphanem" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -477,10 +463,6 @@
             <End Role="KıtapDetay" EntitySet="KıtapDetay" />
           </AssociationSet>
           <AssociationSet Name="FK_Kutuphanem_Kıtaplar" Association="Self.FK_Kutuphanem_Kıtaplar">
-            <End Role="Kıtaplar" EntitySet="Kıtaplar" />
-            <End Role="Kutuphanem" EntitySet="Kutuphanem" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Kutuphanem_Kıtaplar1" Association="Self.FK_Kutuphanem_Kıtaplar1">
             <End Role="Kıtaplar" EntitySet="Kıtaplar" />
             <End Role="Kutuphanem" EntitySet="Kutuphanem" />
           </AssociationSet>
