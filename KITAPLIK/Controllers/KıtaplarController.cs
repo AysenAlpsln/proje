@@ -19,7 +19,7 @@ namespace KITAPLIK.Controllers
         // GET: Kıtaplar
         public ActionResult Index(string ara)
         {
-            var kıtaplar = db.Kıtaplar.Include(k => k.KıtapDetay).Include(k => k.Kutuphanem).Include(k => k.Kutuphanem1);
+            var kıtaplar = db.Kıtaplar.Include(k => k.KıtapDetay).Include(k => k.Kutuphanem);
             return View(kıtaplar.Where(x => x.kıtapadı.Contains(ara)||ara==null).ToList());
         }
 

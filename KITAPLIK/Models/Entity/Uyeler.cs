@@ -28,11 +28,11 @@ namespace KITAPLIK.Models.Entity
         public Nullable<bool> Cınsıyet { get; set; }
         public Nullable<System.DateTime> DogumTarıhı { get; set; }
         public string emaıl { get; set; }
-        public string Telefon { get; set; }
         public string DogumYeri { get; set; }
         public string Meslegi { get; set; }
         public string YasadıgıSehir { get; set; }
         public string Biografi { get; set; }
+        public string Telefon { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Kutuphanem> Kutuphanem { get; set; }
