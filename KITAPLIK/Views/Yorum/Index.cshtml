@@ -1,0 +1,46 @@
+﻿@model IEnumerable<KITAPLIK.Models.Entity.Yorum>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.yorum1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kıtaplar.kıtapadı)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Uyeler.takmaad)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.yorum1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kıtaplar.kıtapadı)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Uyeler.takmaad)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Yorumıd }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Yorumıd }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Yorumıd })
+        </td>
+    </tr>
+}
+
+</table>

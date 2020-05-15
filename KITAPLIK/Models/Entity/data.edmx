@@ -87,7 +87,7 @@
           <Key>
             <PropertyRef Name="Yorumıd" />
           </Key>
-          <Property Name="Yorumıd" Type="int" Nullable="false" />
+          <Property Name="Yorumıd" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="yorum" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="uyeıd" Type="int" Nullable="false" />
           <Property Name="kıtapıd" Type="int" Nullable="false" />

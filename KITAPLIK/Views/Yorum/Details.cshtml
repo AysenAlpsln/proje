@@ -1,0 +1,43 @@
+﻿@model KITAPLIK.Models.Entity.Yorum
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Yorum</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.yorum1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.yorum1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kıtaplar.kıtapadı)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kıtaplar.kıtapadı)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Uyeler.takmaad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uyeler.takmaad)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Yorumıd }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
