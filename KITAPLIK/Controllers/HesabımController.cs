@@ -10,7 +10,7 @@ namespace KITAPLIK.Controllers
     public class HesabımController : Controller
     {
         // GET: Hesabım
-        KıtapEntities1 db = new KıtapEntities1();
+        data db = new data();
         
         public ActionResult Hesabım()
         {

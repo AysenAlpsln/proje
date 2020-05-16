@@ -14,7 +14,7 @@ namespace KITAPLIK.Controllers
 {
     public class KıtaplarController : Controller
     {
-        private KıtapEntities1 db = new KıtapEntities1();
+        private data db = new data();
 
         // GET: Kıtaplar
         public ActionResult Index(string ara)

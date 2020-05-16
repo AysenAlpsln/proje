@@ -17,9 +17,9 @@ namespace KITAPLIK.Models.Entity
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Kıtaplar()
         {
-            this.Yorum = new HashSet<Yorum>();
             this.Kategorıler = new HashSet<Kategorıler>();
             this.yazarlar = new HashSet<yazarlar>();
+            this.Yorum = new HashSet<Yorum>();
         }
     
         public int kıtapıd { get; set; }
@@ -31,10 +31,10 @@ namespace KITAPLIK.Models.Entity
         public virtual KıtapDetay KıtapDetay { get; set; }
         public virtual Kutuphanem Kutuphanem { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Yorum> Yorum { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Kategorıler> Kategorıler { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<yazarlar> yazarlar { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Yorum> Yorum { get; set; }
     }
 }

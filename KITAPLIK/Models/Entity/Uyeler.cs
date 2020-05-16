@@ -18,7 +18,6 @@ namespace KITAPLIK.Models.Entity
         public Uyeler()
         {
             this.Kutuphanem = new HashSet<Kutuphanem>();
-            this.Yorum = new HashSet<Yorum>();
         }
     
         public int Uyeıd { get; set; }
@@ -36,7 +35,5 @@ namespace KITAPLIK.Models.Entity
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Kutuphanem> Kutuphanem { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Yorum> Yorum { get; set; }
     }
 }
