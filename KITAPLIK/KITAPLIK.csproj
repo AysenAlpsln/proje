@@ -236,6 +236,7 @@
     <Content Include="LoginRegistrationForm\css\fonts\franchise-bold-webfont.eot" />
     <Content Include="LoginRegistrationForm\css\fonts\franchise-bold-webfont.ttf" />
     <Content Include="LoginRegistrationForm\css\fonts\franchise-bold-webfont.woff" />
+    <Content Include="libman.json" />
     <EntityDeploy Include="Models\Entity\data.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>data.Designer.cs</LastGenOutput>
@@ -243,7 +244,6 @@
     <Content Include="Models\Entity\data.edmx.diagram">
       <DependentUpon>data.edmx</DependentUpon>
     </Content>
-    <Content Include="libman.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

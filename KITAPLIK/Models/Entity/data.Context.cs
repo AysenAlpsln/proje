@@ -13,10 +13,10 @@ namespace KITAPLIK.Models.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class KıtapEntities1 : DbContext
+    public partial class data : DbContext
     {
-        public KıtapEntities1()
-            : base("name=KıtapEntities1")
+        public data()
+            : base("name=data")
         {
         }
     
