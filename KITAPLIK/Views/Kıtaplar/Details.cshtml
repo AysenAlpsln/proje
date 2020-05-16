@@ -1,4 +1,5 @@
 ﻿@model KITAPLIK.Models.Entity.Kıtaplar
+@using KITAPLIK.Models.Entity
 
 @{
     ViewBag.Title = "Details";
@@ -13,7 +14,15 @@
     <hr />
     <dl class="dl-horizontal">
         <dt style="color:gold">
-            @Html.LabelFor(model => model.kıtapadı,"Kitabın Adı:")
+            @Html.LabelFor(model => model.kıtapadı, "Kitabın Adı:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kıtapadı)
+        </dd>
+
+        <dt style="color:gold">
+            @Html.LabelFor(model => model., "Kitabın Adı:")
         </dt>
 
         <dd>

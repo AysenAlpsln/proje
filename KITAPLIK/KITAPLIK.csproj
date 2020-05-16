@@ -171,24 +171,6 @@
     <Compile Include="Models\Entity\Kıtaplar.cs">
       <DependentUpon>data.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entity\ModelKitaplik.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelKitaplik.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Entity\ModelKitaplik.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelKitaplik.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Entity\ModelKitaplik.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelKitaplik.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Entity\tbl_account.cs">
-      <DependentUpon>ModelKitaplik.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Entity\Uyeler.cs">
       <DependentUpon>data.tt</DependentUpon>
     </Compile>
@@ -243,16 +225,6 @@
       <DependentUpon>data.edmx</DependentUpon>
       <LastGenOutput>data.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Entity\ModelKitaplik.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelKitaplik.edmx</DependentUpon>
-      <LastGenOutput>ModelKitaplik.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Entity\ModelKitaplik.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelKitaplik.edmx</DependentUpon>
-      <LastGenOutput>ModelKitaplik.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="LoginRegistrationForm\css\fonts\BebasNeue-webfont.eot" />
@@ -264,13 +236,6 @@
     <Content Include="LoginRegistrationForm\css\fonts\franchise-bold-webfont.eot" />
     <Content Include="LoginRegistrationForm\css\fonts\franchise-bold-webfont.ttf" />
     <Content Include="LoginRegistrationForm\css\fonts\franchise-bold-webfont.woff" />
-    <EntityDeploy Include="Models\Entity\ModelKitaplik.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelKitaplik.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Entity\ModelKitaplik.edmx.diagram">
-      <DependentUpon>ModelKitaplik.edmx</DependentUpon>
-    </Content>
     <EntityDeploy Include="Models\Entity\data.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>data.Designer.cs</LastGenOutput>
