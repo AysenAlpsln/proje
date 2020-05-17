@@ -22,6 +22,8 @@
           <Property Name="kıtapsayfa" Type="smallint" />
           <Property Name="kıtapdılı" Type="nvarchar" MaxLength="50" />
           <Property Name="kıtapyayınevı" Type="nvarchar(max)" />
+          <Property Name="kitapyazar" Type="nvarchar" MaxLength="50" />
+          <Property Name="kitapkategori" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="KıtapKategorı">
           <Key>
@@ -92,7 +94,7 @@
             <PropertyRef Name="Yorumıd" />
           </Key>
           <Property Name="Yorumıd" Type="int" Nullable="false" />
-          <Property Name="yorum" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="yorum" Type="nvarchar(max)" />
           <Property Name="uyeıd" Type="int" Nullable="false" />
           <Property Name="kıtapıd" Type="int" Nullable="false" />
         </EntityType>
@@ -306,6 +308,8 @@
           <Property Name="kıtapdılı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="kıtapyayınevı" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Kıtaplar" Relationship="Self.FK_KıtapDetay_Kıtaplar" FromRole="KıtapDetay" ToRole="Kıtaplar" />
+          <Property Name="kitapyazar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kitapkategori" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Kıtaplar">
           <Key>
@@ -357,7 +361,7 @@
             <PropertyRef Name="Yorumıd" />
           </Key>
           <Property Name="Yorumıd" Type="Int32" Nullable="false" />
-          <Property Name="yorum1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="yorum1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="uyeıd" Type="Int32" Nullable="false" />
           <Property Name="kıtapıd" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Kıtaplar" Relationship="Self.FK_Yorum_Kıtaplar" FromRole="Yorum" ToRole="Kıtaplar" />
@@ -516,6 +520,8 @@
           <EntitySetMapping Name="KıtapDetay">
             <EntityTypeMapping TypeName="KıtapModel.KıtapDetay">
               <MappingFragment StoreEntitySet="KıtapDetay">
+                <ScalarProperty Name="kitapkategori" ColumnName="kitapkategori" />
+                <ScalarProperty Name="kitapyazar" ColumnName="kitapyazar" />
                 <ScalarProperty Name="kıtapıd" ColumnName="kıtapıd" />
                 <ScalarProperty Name="kıtapcevırmenı" ColumnName="kıtapcevırmenı" />
                 <ScalarProperty Name="kıtapbasım" ColumnName="kıtapbasım" />
