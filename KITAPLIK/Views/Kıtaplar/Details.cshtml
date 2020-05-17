@@ -1,6 +1,4 @@
 ﻿@model KITAPLIK.Models.Entity.Kıtaplar
-@using KITAPLIK.Models.Entity
-
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -38,11 +36,27 @@
         </dd>
 
         <dt style="color:gold">
+            @Html.LabelFor(model => model.KıtapDetay.kitapyazar, "Kitabın Yazarı:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KıtapDetay.kitapyazar)
+        </dd>
+
+        <dt style="color:gold">
             @Html.LabelFor(model => model.KıtapDetay.kıtapcevırmenı, "Kitabın Çevirmeni:")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.KıtapDetay.kıtapcevırmenı)
+        </dd>
+
+        <dt style="color:gold">
+            @Html.LabelFor(model => model.KıtapDetay.kitapkategori, "Kitabın Kategorisi:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KıtapDetay.kitapkategori)
         </dd>
 
         <dt style="color:gold">
@@ -74,9 +88,7 @@
         <dd>
             @Html.DisplayFor(model => model.KıtapDetay.kıtapyayınevı)
         </dd>
-
     </dl>
 </div>
 <p>
-    <a href="/Kıtaplar/Edit/@Model.kıtapıd" class="btn btn-info">GÜNCELLE</a> |
     <a href="/Kıtaplar/Index/@Model.kıtapıd" class="btn btn-success">LİSTEYE GERİ DÖN</a></p>
