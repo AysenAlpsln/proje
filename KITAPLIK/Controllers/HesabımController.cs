@@ -10,7 +10,7 @@ namespace KITAPLIK.Controllers
     public class HesabımController : Controller
     {
         // GET: Hesabım
-        data db = new data();
+        data3 db = new data3();
         
         public ActionResult Hesabım()
         {

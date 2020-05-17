@@ -26,6 +26,7 @@ namespace KITAPLIK.Models.Entity
         public int kıtapıd { get; set; }
     
         public virtual Kıtaplar Kıtaplar { get; set; }
+        public virtual Uyeler Uyeler { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Kutuphanem> Kutuphanem { get; set; }
     }

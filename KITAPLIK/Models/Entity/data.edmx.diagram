@@ -4,22 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2fb2c04f1c924d54a12249472a42bfcc" Name="Diagram1" ZoomLevel="95">
-        <EntityTypeShape EntityType="KıtapModel.Kategorıler" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KıtapModel.KıtapDetay" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="KıtapModel.Kıtaplar" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="KıtapModel.Kutuphanem" Width="1.5" PointX="8.25" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="KıtapModel.Uyeler" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KıtapModel.yazarlar" Width="1.5" PointX="5.25" PointY="11.875" IsExpanded="true" />
+      <Diagram DiagramId="faa00b938d554453b5bf33861d260005" Name="Diagram1">
+        <EntityTypeShape EntityType="KıtapModel.Kategorıler" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KıtapModel.KıtapDetay" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KıtapModel.Kıtaplar" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KıtapModel.Uyeler" Width="1.5" PointX="5.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KıtapModel.yazarlar" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KıtapModel.Yorum" Width="1.5" PointX="8.25" PointY="6" IsExpanded="true" />
         <AssociationConnector Association="KıtapModel.FK_KıtapDetay_Kıtaplar" ManuallyRouted="false" />
-        <AssociationConnector Association="KıtapModel.FK_Kutuphanem_Kıtaplar" ManuallyRouted="false" />
-        <AssociationConnector Association="KıtapModel.FK_Kutuphanem_Uyeler" ManuallyRouted="false" />
+        <AssociationConnector Association="KıtapModel.FK_Yorum_Kıtaplar" ManuallyRouted="false" />
+        <AssociationConnector Association="KıtapModel.FK_Yorum_Uyeler" ManuallyRouted="false" />
         <AssociationConnector Association="KıtapModel.KıtapKategorı" ManuallyRouted="false" />
         <AssociationConnector Association="KıtapModel.KıtapYazar" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="KıtapModel.Yorum" Width="1.5" PointX="5.25" PointY="8.375" />
-        <AssociationConnector Association="KıtapModel.FK_Yorum_Kıtaplar" />
+        <EntityTypeShape EntityType="KıtapModel.Kutuphanem" Width="1.5" PointX="10.5" PointY="3.5" />
+        <AssociationConnector Association="KıtapModel.FK_Kutuphanem_Kıtaplar" />
+        <AssociationConnector Association="KıtapModel.FK_Kutuphanem_Uyeler" />
         <AssociationConnector Association="KıtapModel.FK_Kutuphanem_Yorum" />
-        </Diagram>
+      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

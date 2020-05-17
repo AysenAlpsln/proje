@@ -18,6 +18,7 @@ namespace KITAPLIK.Models.Entity
         public int uyeıd { get; set; }
         public Nullable<bool> okuyacaklarım { get; set; }
         public Nullable<bool> okuduklarım { get; set; }
+        public Nullable<bool> begendiklerim { get; set; }
         public Nullable<int> yorumlarııd { get; set; }
     
         public virtual Kıtaplar Kıtaplar { get; set; }

@@ -12,7 +12,7 @@ namespace KITAPLIK.Controllers
 {
     public class YorumController : Controller
     {
-        private data db = new data();
+        private data3 db = new data3();
 
         // GET: Yorum
         public ActionResult Index()
