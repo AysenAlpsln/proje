@@ -10,6 +10,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         /* Set black background color, white text and some padding */
         footer {
@@ -33,29 +35,11 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/Kesfet/Index">Keşfet</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Türler<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Edebiyat</a></li>
-                            <li><a href="#">Türk Klasikleri</a></li>
-                            <li><a href="#">Roman</a></li>
-                        </ul>
-                    </li>
+                    <li ><a href="/Kesfet/Index">Keşfet</a></li>
                     <li><a href="/Yorum/Index">Yorum Yap</a></li>
                     <li><a href="/Kıtaplar/Index">Kitaplar</a></li>
                     <li><a href="#">Yazarlar</a></li>
                 </ul>
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="form-group input-group">
-                        <input type="text" class="form-control" placeholder="Ara...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </span>
-                    </div>
-                </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a class="dropdown-toogle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> @HttpContext.Current.User.Identity.Name</a>
@@ -63,9 +47,9 @@
                             <li><a href="/Hesabım/Hesabım">Hesabım</a></li>
                             <li><a href="#">Hesap Ayarları</a></li>
                             <li><a href="#">Eksik Kitap Bildir</a></li>
-                            <li><a href="/Account/Logout">Çıkış Yap</a></li>
                         </ul>
                     </li>
+                    <li><a href="/Account/Logout"><span class="glyphicon glyphicon-log-out"></span> Çıkış Yap</a></li>
                 </ul>
             </div>
         </div>
@@ -75,8 +59,8 @@
         @RenderBody()
     </div>
 
-    <footer class="container-fluid text-center" style="background-color:#555;">
+    @*<footer class="container-fluid text-center" >
         <p>&copy Bu web sitesi 2020 yılında yapılmıştır.</p>
-    </footer>
+    </footer>*@
 </body>
 </html>

@@ -36,10 +36,10 @@
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">AB</a>
+                <a class="navbar-brand" href="#"></a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Akış</a></li>
+                <li><a href="#">Akış</a></li>
                 <li><a href="#">Okuduklarım</a></li>
                 <li><a href="#">Okuyacaklarım</a></li>
                 <li><a href="#">Yorumlar</a></li>
@@ -54,16 +54,13 @@
     <div class="container">
         <div class="row content">
             <div class="col-sm-3 sidenav ">
-                @using (Html.BeginForm("Detay", "Hesabım", FormMethod.Post))
-                {
-                    <h2>Kullanıcı ismi</h2>
+                <h2>@HttpContext.Current.User.Identity.Name</h2>
                     <ul class="nav">
                         <li>Cinsiyet</li>
                         <li>Doğum Tarihi</li>
                         <li>Email</li>
                         <li>Katıldığı tarih</li>
                     </ul><br>
-                }
             </div>
             <br>
           

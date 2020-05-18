@@ -37,7 +37,7 @@ namespace KITAPLIK.Controllers
             }
             return View(kıtaplar);
         }
-
+        [Authorize(Roles ="A")]
         // GET: Kıtaplar/Create
         public ActionResult Create()
         {
@@ -49,6 +49,7 @@ namespace KITAPLIK.Controllers
         // POST: Kıtaplar/Create
         // Aşırı gönderim saldırılarından korunmak için, lütfen bağlamak istediğiniz belirli özellikleri etkinleştirin, 
         // daha fazla bilgi için https://go.microsoft.com/fwlink/?LinkId=317598 sayfasına bakın.
+        [Authorize(Roles = "A")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "kıtapıd,kıtapadı,acıklama,kıtapresım,cokokunanlar,edıtorunsectıklerı,Anasayfa,Surukleyıcıyenılerıcın")] Kıtaplar kıtaplar)

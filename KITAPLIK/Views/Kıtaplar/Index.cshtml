@@ -9,12 +9,16 @@
 {
     <label>Kitap Ara:</label>
     @Html.Editor("ara")
-    <input type="submit" value="Ara" />
+    <input type="submit" value="Ara"/>
 }
 <h2 style="color:cadetblue; font-family:'Italic Outline Art'; font-weight:bold"><i>Kitapları İnceleyin...</i></h2>
 
 <p>
-    @*@Html.ActionLink("Create New", "Create")*@
+    @if (User.IsInRole("A"))
+    {
+       <h4 class="btn btn-default"> @Html.ActionLink("Kitap Ekle", "Create")</h4>
+    }
+
 </p>
 <table class="table">
     <tr>
@@ -40,7 +44,11 @@
         <td>
             <a href="/Kıtaplar/Details/@item.kıtapıd" class="btn btn-primary">DETAY</a>
             <a href="/Kıtaplar/Edit/@item.kıtapıd" class="btn btn-info">LİSTELERE EKLE</a>
-            @*<a href="/Kıtaplar/Delete/@item.kıtapıd" class="btn btn-danger">SİL</a>*@
+            @if (User.IsInRole("A"))
+            {
+                <a href="/Kıtaplar/Delete/@item.kıtapıd" class="btn btn-danger">SİL</a>
+            }
+
             @*@Html.ActionLink("Edit", "Edit", new { id=item.kıtapıd}, new { target = "_blank", name = "link", style = "color : darksalmon" }) |*@
             @*@Html.ActionLink("Details", "Details", new { id = item.kıtapıd }) |
         @Html.ActionLink("Delete", "Delete", new { id = item.kıtapıd })*@

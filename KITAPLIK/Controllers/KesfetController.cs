@@ -8,6 +8,7 @@ namespace KITAPLIK.Controllers
 {
     public class KesfetController : Controller
     {
+        [Authorize(Roles ="A,U")]
         // GET: Kesfet
         public ActionResult Index()
         {

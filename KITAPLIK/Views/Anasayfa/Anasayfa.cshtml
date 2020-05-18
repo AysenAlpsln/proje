@@ -37,29 +37,12 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/Kesfet/Index">Keşfet</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Türler<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Edebiyat</a></li>
-                            <li><a href="#">Türk Klasikleri</a></li>
-                            <li><a href="#">Roman</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="/Kesfet/Index">Keşfet</a></li>
                     <li><a href="/Yorum/Index">Yorum Yap</a></li>
                     <li><a href="/Kıtaplar/Index">Kitaplar</a></li>
                     <li><a href="#">Yazarlar</a></li>
                 </ul>
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="form-group input-group">
-                        <input type="text" class="form-control" placeholder="Ara...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </span>
-                    </div>
-                </form>
+                
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a class="dropdown-toogle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> @HttpContext.Current.User.Identity.Name</a>
@@ -67,9 +50,9 @@
                             <li><a href="/Hesabım/Hesabım">Hesabım</a></li>
                             <li><a href="#">Hesap Ayarları</a></li>
                             <li><a href="#">Eksik Kitap Bildir</a></li>
-                            <li><a href="/Account/Logout">Çıkış Yap</a></li>
                         </ul>
                     </li>
+                    <li><a  href="/Account/Logout"><span class="glyphicon glyphicon-log-out"></span>Çıkış Yap</a></li>
                 </ul>
             </div>
         </div>
@@ -79,15 +62,10 @@
         <div class="row">
             <div class="col-sm-3 well">
                 <div class="well">
-                    <p><a href="#">My Profile</a></p>
+                    <h4 style="color:darkred">@HttpContext.Current.User.Identity.Name</h4>
                     Buraya veritabanından profil resmi çekilecek.
                 </div>
-                <div class="well">
-                    <p><a href="#">Okuduğu Kitap</a></p>
-                    <p>
-                        Okuduğu kitap girilen profile göre veritabanından alınacak.
-                    </p>
-                </div>
+                
                 <div class="alert alert-success fade in">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
                     <p><strong>Haydi!</strong></p>
@@ -99,7 +77,7 @@
             </div>
             <div class="col-sm-7">
 
-                       Veritabnından çekilen yorumlar eklenecek.
+                       Veritabınından çekilen yorumlar eklenecek.
 
                 <div class="row">
                     <div class="col-sm-3">
@@ -117,7 +95,7 @@
                     <div class="col-sm-3">
                         <div class="well">
                             <p>Saliha</p>
-                            <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+                            <img src="bandmember.jpg" class="img-circle" height="55" width="55" >
                         </div>
                     </div>
                     <div class="col-sm-9">
@@ -130,7 +108,7 @@
                     <div class="col-sm-3">
                         <div class="well">
                             <p>Betül</p>
-                            <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+                            <img src="bandmember.jpg" class="img-circle" height="55" width="55" >
                         </div>
                     </div>
                     <div class="col-sm-9">
@@ -142,8 +120,8 @@
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="well">
-                            <p>Ahmet</p>
-                            <img src="~/web pages/Project Images/p1.jpeg" class="img-circle" height="55" width="55" alt="Avatar">
+                            <p>Mehmet</p>
+                            <img src="" class="img-circle" height="55" width="55" >
                         </div>
                     </div>
                     <div class="col-sm-9">
@@ -155,7 +133,7 @@
             </div>
             <div class="col-sm-2 well">
                 <div class="thumbnail">
-                    <p>2020 Okuma Hedefim</p>
+                    <p>Okuma Hedefim</p>
                     <img src="~/web pages/Project Images/book.jpg" width="400" height="300">
                     <br />
                     <button class="btn btn-warning">Güncelle</button>
@@ -164,9 +142,9 @@
         </div>
     </div>
 
-    <footer class="container-fluid text-center">
+    @*<footer class="container-fluid text-center">
         <p>&copy Bu web sitesi 2020 yılında yapılmıştır.</p>
-    </footer>
+    </footer>*@
 
 </body>
 </html>
