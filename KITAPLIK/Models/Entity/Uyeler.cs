@@ -33,6 +33,7 @@ namespace KITAPLIK.Models.Entity
         public string Meslegi { get; set; }
         public string YasadıgıSehir { get; set; }
         public string Biografi { get; set; }
+        public string role { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Yorum> Yorum { get; set; }

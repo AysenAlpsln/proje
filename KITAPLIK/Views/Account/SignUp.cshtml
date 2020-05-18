@@ -26,7 +26,6 @@
 </head>
 <body>
     <div class="container">
-       
         <header>
             <h1>Welcome <span>AnalizeBook </span></h1>
         </header>
@@ -37,16 +36,21 @@
                 <a class="hiddenanchor" id="tologin"></a>
                 <div id="wrapper">
                     <div id="login" class="animate form">
+                        @*@ViewBag.Mesaj*@
                         @using (Html.BeginForm("Login", "Account", FormMethod.Post))
-                        { 
+                        {
                             <h1>Log in</h1>
                             <p>
-                                <label for="username" class="uname" data-icon="u"> Your username </label>
-                                <input id="username" name="takmaad" required="required" type="text" placeholder="myusername" />
+                                @Html.LabelFor(model => model.takmaad, "Kullanıcı Adı:")
+                                @Html.TextBoxFor(model => model.takmaad, new { @class = "form-control", placeholder = "Kullanıcı Adınızı Giriniz..." })
+                                @*<label for="username" class="uname" data-icon="u"> Your username </label>
+                <input id="username" name="takmaad" required="required" type="text" placeholder="myusername" />*@
                             </p>
                             <p>
-                                <label for="password" class="youpasswd" data-icon="p"> Your password </label>
-                                <input id="password" name="sıfre" required="required" type="password" placeholder="eg. X8df!90EO" />
+                                @Html.LabelFor(model => model.sıfre, "Parola:")
+                                @Html.PasswordFor(model => model.sıfre, new { @class = "form-control", placeholder = "Parolanızı Giriniz..." })
+                                @*<label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                <input id="password" name="sıfre" required="required" type="password" placeholder="eg. X8df!90EO" />*@
                             </p>
                             <p class="login button">
                                 <input type="submit" value="Login" />
@@ -64,25 +68,33 @@
                             <h1> Sign up </h1>
                             <form action="#" method="post">
                                 <p>
-                                    <label for="namesignup" class="name" data-icon="u">Your name and surname</label>
-                                    <input id="namesignup" name="AdSoyad" required="required" type="text" placeholder="Name and Surname..." />
+                                    @Html.LabelFor(model => model.AdSoyad,"Ad Soyad:")
+                                    @Html.TextBoxFor(model => model.AdSoyad, new { @class="form-control",placeholder="Adınız ve Soyadınız..."})
+                                    @*<label for="namesignup" class="name" data-icon="u">Your name and surname</label>
+                                    <input id="namesignup" name="AdSoyad" required="required" type="text" placeholder="Name and Surname..." />*@
                                 </p>
                                 <p>
-                                    <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-                                    <input id="usernamesignup" name="takmaad" required="required" type="text" placeholder="mysuperusername" />
+                                    @Html.LabelFor(model => model.takmaad,"Kullanıcı Adı:")
+                                    @Html.TextBoxFor(model => model.takmaad, new { @class = "form-control", placeholder = "Belirlediğiniz Kullanıcı Adı..." })
+                                    @*<label for="usernamesignup" class="uname" data-icon="u">Your username</label>
+        <input id="usernamesignup" name="takmaad" required="required" type="text" placeholder="mysuperusername" />*@
                                 </p>
 
                                 <p>
-                                    <label for="emailsignup" class="youmail" data-icon="e"> Your email</label>
-                                    <input id="emailsignup" name="emaıl" required="required" type="email" placeholder="mysupermail@mail.com" />
+                                    @Html.LabelFor(model => model.emaıl,"Email:")
+                                    @Html.TextBoxFor(model => model.emaıl, new { @class = "form-control", placeholder = "Mail Adresiniz..." })
+                                    @*<label for="emailsignup" class="youmail" data-icon="e"> Your email</label>
+        <input id="emailsignup" name="emaıl" required="required" type="email" placeholder="mysupermail@mail.com" />*@
                                 </p>
                                 <p>
-                                    <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-                                    <input id="passwordsignup" name="sıfre" required="required" type="password" placeholder="eg. X8df!90EO" />
+                                    @Html.LabelFor(model => model.sıfre,"Parola:")
+                                    @Html.TextBoxFor(model => model.sıfre, new { @class = "form-control", placeholder = "Belirlediğiniz Paralo..." })
+                                    @*<label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+        <input id="passwordsignup" name="sıfre" required="required" type="password" placeholder="eg. X8df!90EO" />*@
                                 </p>
                                 <p>
-                                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO" />
+                                    @*<label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+        <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO" />*@
                                 </p>
                                 <p class="signin button">
                                     <input type="submit" value="Sign up" />

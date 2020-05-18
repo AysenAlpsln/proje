@@ -30,6 +30,7 @@ namespace KITAPLIK.Controllers
 
   
         }
+        
         [HttpPost]
         public ActionResult Login(Uyeler t)
         {
@@ -41,9 +42,16 @@ namespace KITAPLIK.Controllers
             }
             else
             {
-                ModelState.AddModelError(key: "", errorMessage: "Kullanıcı adı veya şifre hatalı");
+                //ViewBag.Mesaj = "Geçersiz Kullanıcı Adı veya Parola Girdiniz!";
                 return View();
             }
+        }
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("SignUp");
+            //return View("SignUp");
         }
         
     }

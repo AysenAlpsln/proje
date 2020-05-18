@@ -58,12 +58,12 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a class="dropdown-toogle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> My Account</a>
+                        <a class="dropdown-toogle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> @HttpContext.Current.User.Identity.Name</a>
                         <ul class="dropdown-menu">
                             <li><a href="/Hesabım/Hesabım">Hesabım</a></li>
                             <li><a href="#">Hesap Ayarları</a></li>
                             <li><a href="#">Eksik Kitap Bildir</a></li>
-                            <li><a href="#">Çıkış Yap</a></li>
+                            <li><a href="/Account/Logout">Çıkış Yap</a></li>
                         </ul>
                     </li>
                 </ul>

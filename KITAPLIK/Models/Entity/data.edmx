@@ -81,6 +81,7 @@
           <Property Name="Meslegi" Type="nvarchar(max)" />
           <Property Name="YasadıgıSehir" Type="nvarchar" MaxLength="50" />
           <Property Name="Biografi" Type="nvarchar(max)" />
+          <Property Name="role" Type="nvarchar" MaxLength="5" />
         </EntityType>
         <EntityType Name="yazarlar">
           <Key>
@@ -347,6 +348,7 @@
           <Property Name="Meslegi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="YasadıgıSehir" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Biografi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="role" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="yazarlar">
           <Key>
@@ -548,6 +550,7 @@
           <EntitySetMapping Name="Uyeler">
             <EntityTypeMapping TypeName="KıtapModel.Uyeler">
               <MappingFragment StoreEntitySet="Uyeler">
+                <ScalarProperty Name="role" ColumnName="role" />
                 <ScalarProperty Name="Biografi" ColumnName="Biografi" />
                 <ScalarProperty Name="YasadıgıSehir" ColumnName="YasadıgıSehir" />
                 <ScalarProperty Name="Meslegi" ColumnName="Meslegi" />

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace KITAPLIK.Controllers
 {
+    [Authorize]
     public class AnasayfaController : Controller
     {
         // GET: Anasayfa
@@ -13,7 +14,7 @@ namespace KITAPLIK.Controllers
         {
             return View();
         }
-        [Authorize]
+        
         public ActionResult Anasayfa()
         {
             return View();
