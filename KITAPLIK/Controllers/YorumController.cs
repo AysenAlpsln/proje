@@ -99,6 +99,7 @@ namespace KITAPLIK.Controllers
         }
 
         // GET: Yorum/Delete/5
+        [Authorize(Roles ="A")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -114,6 +115,7 @@ namespace KITAPLIK.Controllers
         }
 
         // POST: Yorum/Delete/5
+        [Authorize(Roles ="A")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
