@@ -9,10 +9,14 @@ namespace KITAPLIK.Controllers
 {
     public class AyarlarController : Controller
     {
-        data3 db = new data3();
+        KıtapEntities3 db = new KıtapEntities3();
         // GET: Ayarlar
+        public ActionResult Ayarlar()
+        {
+            return View();
+        }
         [HttpPost]
-        public ActionResult Ayarlar(Uyeler k)
+        public ActionResult Düzenle(Uyeler k)
         {
             var uye = db.Uyeler.Find(k.takmaad);
             uye.AdSoyad = k.AdSoyad;
@@ -21,7 +25,6 @@ namespace KITAPLIK.Controllers
             uye.DogumTarıhı = k.DogumTarıhı;
             uye.Telefon = k.Telefon;
             uye.Meslegi = k.Meslegi;
-            uye.YasadıgıSehir = k.YasadıgıSehir;
             uye.Biografi = k.Biografi;
             db.SaveChanges();
             return RedirectToAction("Hesabım", "Hesabım");

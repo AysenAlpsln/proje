@@ -13,10 +13,10 @@ namespace KITAPLIK.Models.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class data3 : DbContext
+    public partial class KıtapEntities3 : DbContext
     {
-        public data3()
-            : base("name=data3")
+        public KıtapEntities3()
+            : base("name=KıtapEntities3")
         {
         }
     
@@ -28,9 +28,9 @@ namespace KITAPLIK.Models.Entity
         public virtual DbSet<Kategorıler> Kategorıler { get; set; }
         public virtual DbSet<KıtapDetay> KıtapDetay { get; set; }
         public virtual DbSet<Kıtaplar> Kıtaplar { get; set; }
+        public virtual DbSet<Kutuphanem> Kutuphanem { get; set; }
         public virtual DbSet<Uyeler> Uyeler { get; set; }
         public virtual DbSet<yazarlar> yazarlar { get; set; }
         public virtual DbSet<Yorum> Yorum { get; set; }
-        public virtual DbSet<Kutuphanem> Kutuphanem { get; set; }
     }
 }

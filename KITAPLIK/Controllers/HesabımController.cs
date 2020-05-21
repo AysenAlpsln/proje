@@ -10,7 +10,7 @@ namespace KITAPLIK.Controllers
     public class HesabımController : Controller
     {
         // GET: Hesabım
-        data3 db = new data3();
+        KıtapEntities3 db = new KıtapEntities3();
         
         public ActionResult Hesabım()
         {
@@ -30,7 +30,6 @@ namespace KITAPLIK.Controllers
             uye.DogumTarıhı = u.DogumTarıhı;
             uye.Cınsıyet = u.Cınsıyet;
             uye.Meslegi = u.Meslegi;
-            uye.YasadıgıSehir = u.YasadıgıSehir;
             uye.Biografi = u.Biografi;
             db.SaveChanges();
             return RedirectToAction("Hesabım");

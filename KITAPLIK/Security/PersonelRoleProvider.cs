@@ -42,7 +42,7 @@ namespace KITAPLIK.Security
 
         public override string[] GetRolesForUser(string username)
         {
-            data3 db = new data3();
+            KıtapEntities3 db = new KıtapEntities3();
             var kullanıcı = db.Uyeler.FirstOrDefault(x => x.takmaad == username);
             return new string[] { kullanıcı.role };
         }

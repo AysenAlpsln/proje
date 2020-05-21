@@ -11,7 +11,7 @@ namespace KITAPLIK.Controllers
     public class AccountController : Controller
     {
         // GET: Account
-        data3 db = new data3();
+        KıtapEntities3 db = new KıtapEntities3();
         public ActionResult Index()
         {
             return View();
