@@ -5,31 +5,30 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3 style="color:#074490; font-family:'Book Antiqua'; font-weight:bold"><i>Bunu silmek istediğinize emin misiniz?</i></h3>
 <div>
-    <h4>Yorum</h4>
+    <h4 style="color:#074490; font-family:'Book Antiqua'; font-weight:bold"><i>Yorum</i></h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.yorum1)
+    <dl class="dl-horizontal" style="font-family:'Italic Outline Art'">
+        <dt style="color:firebrick">
+            @Html.LabelFor(model => model.yorum1,"Yorum:")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.yorum1)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Kıtaplar.kıtapadı)
+        <br />
+        <dt style="color:firebrick">
+            @Html.LabelFor(model => model.Kıtaplar.kıtapadı,"Kitabın Adı:")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Kıtaplar.kıtapadı)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Uyeler.takmaad)
+        <br />
+        <dt style="color:firebrick">
+            @Html.LabelFor(model => model.Uyeler.takmaad,"Yorumun Sahibi:")
         </dt>
 
         <dd>
@@ -42,8 +41,9 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="SİL" class="btn btn-danger glyphicon glyphicon-remove-circle" /> |
+            <a href="/Yorum/Index" class="btn btn-success  glyphicon glyphicon-arrow-left" > LİSTEYE GERİ DÖN</a>
+            @*@Html.ActionLink("Back to List", "Index")*@
         </div>
     }
 </div>

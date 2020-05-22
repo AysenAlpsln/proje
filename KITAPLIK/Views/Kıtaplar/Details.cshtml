@@ -8,10 +8,10 @@
 
 <div>
     <br />
-    <h4 style="color:gold; font-weight:bold" >@Html.DisplayFor(model =>model.kıtapadı)</h4>
+    <h4 style="color:firebrick; font-weight:bold" >@Html.DisplayFor(model =>model.kıtapadı)</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt style="color:gold">
+    <dl class="dl-horizontal" style="font-family:'Italic Outline Art'">
+        <dt style="color:firebrick">
             @Html.LabelFor(model => model.kıtapadı, "Kitabın Adı:")
         </dt>
 
@@ -19,7 +19,7 @@
             @Html.DisplayFor(model => model.kıtapadı)
         </dd>
 
-        <dt style="color:gold">
+        <dt style="color:firebrick">
             @Html.LabelFor(model => model.acıklama, "Kitabın Açıklaması:")
         </dt>
 
@@ -27,7 +27,7 @@
             @Html.DisplayFor(model => model.acıklama)
         </dd>
 
-        <dt style="color:gold">
+        <dt style="color:firebrick">
             @Html.LabelFor(model => model.kıtapresım, "Kitabın Resmi:")
         </dt>
 
@@ -35,7 +35,7 @@
             @Html.DisplayFor(model => model.kıtapresım)
         </dd>
 
-        <dt style="color:gold">
+        <dt style="color:firebrick">
             @Html.LabelFor(model => model.KıtapDetay.kitapyazar, "Kitabın Yazarı:")
         </dt>
 
@@ -43,7 +43,7 @@
             @Html.DisplayFor(model => model.KıtapDetay.kitapyazar)
         </dd>
 
-        <dt style="color:gold">
+        <dt style="color:firebrick">
             @Html.LabelFor(model => model.KıtapDetay.kıtapcevırmenı, "Kitabın Çevirmeni:")
         </dt>
 
@@ -51,7 +51,7 @@
             @Html.DisplayFor(model => model.KıtapDetay.kıtapcevırmenı)
         </dd>
 
-        <dt style="color:gold">
+        <dt style="color:firebrick">
             @Html.LabelFor(model => model.KıtapDetay.kitapkategori, "Kitabın Kategorisi:")
         </dt>
 
@@ -59,7 +59,7 @@
             @Html.DisplayFor(model => model.KıtapDetay.kitapkategori)
         </dd>
 
-        <dt style="color:gold">
+        <dt style="color:firebrick">
             @Html.LabelFor(model => model.KıtapDetay.kıtapbasım, "Basım Tarihi:")
         </dt>
 
@@ -67,21 +67,21 @@
             @Html.DisplayFor(model => model.KıtapDetay.kıtapbasım)
         </dd>
 
-        <dt style="color:gold">
+        <dt style="color:firebrick">
             @Html.LabelFor(model => model.KıtapDetay.kıtapdılı, "Dili:")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.KıtapDetay.kıtapdılı)
         </dd>
-        <dt style="color:gold">
+        <dt style="color:firebrick">
             @Html.LabelFor(model => model.KıtapDetay.kıtapsayfa, "Sayfa Sayısı:")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.KıtapDetay.kıtapsayfa)
         </dd>
-        <dt style="color:gold">
+        <dt style="color:firebrick">
             @Html.LabelFor(model => model.KıtapDetay.kıtapyayınevı, "Yayınevi:")
         </dt>
 
@@ -91,4 +91,5 @@
     </dl>
 </div>
 <p>
-    <a href="/Kıtaplar/Index/@Model.kıtapıd" class="btn btn-success">LİSTEYE GERİ DÖN</a></p>
+    <a href="/Kıtaplar/Index" class="btn btn-success glyphicon glyphicon-arrow-left"> LİSTEYE GERİ DÖN</a>
+</p>

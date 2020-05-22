@@ -14,7 +14,6 @@
         <EntityTypeShape EntityType="data.Yorum" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
         <AssociationConnector Association="data.FK_KıtapDetay_Kıtaplar" ManuallyRouted="false" />
         <AssociationConnector Association="data.FK_Kutuphanem_Kıtaplar" ManuallyRouted="false" />
-        <AssociationConnector Association="data.FK_Kutuphanem_Kıtaplar1" ManuallyRouted="false" />
         <AssociationConnector Association="data.FK_Yorum_Kıtaplar" ManuallyRouted="false" />
         <AssociationConnector Association="data.FK_Kutuphanem_Uyeler" ManuallyRouted="false" />
         <AssociationConnector Association="data.FK_Kutuphanem_Yorum" ManuallyRouted="false" />

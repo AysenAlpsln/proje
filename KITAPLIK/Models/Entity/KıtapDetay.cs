@@ -20,6 +20,8 @@ namespace KITAPLIK.Models.Entity
         public Nullable<short> kıtapsayfa { get; set; }
         public string kıtapdılı { get; set; }
         public string kıtapyayınevı { get; set; }
+        public string kitapyazar { get; set; }
+        public string kitapkategori { get; set; }
     
         public virtual Kıtaplar Kıtaplar { get; set; }
     }

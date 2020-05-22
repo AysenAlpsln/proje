@@ -8,7 +8,7 @@
 <h2 style="color:#074490; font-family:'Book Antiqua';font-weight:bold"><i>Bir Yorum Ekleyin...</i></h2>
 
 <p>
-    <h4 class="btn btn-default">@Html.ActionLink("Yorum Ekle", "Create")</h4>
+    <h4 class="btn btn-default glyphicon glyphicon-pencil">@Html.ActionLink(" Yorum Ekle", "Create")</h4>
 </p>
 <table class="table">
     <tr>
@@ -39,11 +39,9 @@
             <td>
                 @if (User.IsInRole("A"))
                 {
-                    <a href="/Yorum/Delete/@item.Yorumıd" class="btn btn-danger">SİL</a>
+                    <a href="/Yorum/Delete/@item.Yorumıd" class="btn btn-danger glyphicon glyphicon-remove-circle"> SİL</a>
                 }
-                @*@Html.ActionLink("Edit", "Edit", new { id=item.Yorumıd }) |
-                    @Html.ActionLink("Details", "Details", new { id=item.Yorumıd }) |
-                    @Html.ActionLink("Delete", "Delete", new { id=item.Yorumıd })*@
+                
             </td>
         </tr>
     }

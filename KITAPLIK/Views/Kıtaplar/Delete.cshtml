@@ -5,73 +5,70 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3 style="color:#074490; font-family:'Book Antiqua'; font-weight:bold"><i>Bunu silmek istediğinize emin misiniz?</i></h3>
 <div>
-    <h4>Kıtaplar</h4>
+    <h4 style="color:#074490; font-family:'Book Antiqua'; font-weight:bold"><i>Kitap</i></h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.kıtapadı)
+    <dl class="dl-horizontal" style="font-family:'Italic Outline Art'">
+        <dt style="color:firebrick">
+            @Html.LabelFor(model => model.kıtapadı, "Kitap Adı:")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.kıtapadı)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.acıklama)
+        <br />
+        <dt style="color:firebrick">
+            @Html.LabelFor(model => model.acıklama, "Açıklaması:")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.acıklama)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.kıtapresım)
+        <br />
+        <dt style="color:firebrick">
+            @Html.LabelFor(model => model.kıtapresım, "Resmi:")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.kıtapresım)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.cokokunanlar)
+        <br />
+        <dt style="color:firebrick">
+            @Html.LabelFor(model => model.KıtapDetay.kitapyazar, "Yazar Adı:")
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.cokokunanlar)
+            @Html.DisplayFor(model => model.KıtapDetay.kitapyazar)
         </dd>
-
-       
-
-        <dt>
-            @Html.DisplayNameFor(model => model.KıtapDetay.kıtapcevırmenı)
+        <br />
+        <dt style="color:firebrick">
+            @Html.LabelFor(model => model.KıtapDetay.kıtapcevırmenı, "Çevirmen Adı:")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.KıtapDetay.kıtapcevırmenı)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Kutuphanem.kıtapıd)
+        <br />
+        <dt style="color:firebrick">
+            @Html.LabelFor(model => model.KıtapDetay.kitapkategori, "Kategori:")
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Kutuphanem.kıtapıd)
+            @Html.DisplayFor(model => model.KıtapDetay.kitapkategori)
         </dd>
 
-      
+
 
     </dl>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a href="/Kıtaplar/Index" class="btn btn-success glyphicon glyphicon-arrow-left"> LİSTEYE GERİ DÖN</a>
+    </div>
     }
 </div>

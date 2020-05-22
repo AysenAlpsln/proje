@@ -8,36 +8,53 @@
 
 @using (Html.BeginForm("Düzenle", "Ayarlar", FormMethod.Post))
 {
-    <div class="form-group">
-        @Html.LabelFor(m => m.takmaad)
-        @Html.TextBoxFor(m => m.takmaad, new { @class = "form-control" })
-        <br />
-        @Html.LabelFor(m => m.AdSoyad)
+<div class="form-group">
+    <p style="color:firebrick">
+        @Html.LabelFor(m => m.takmaad,"Kullanıcı Adınız:")
+        @Html.TextBoxFor(m => m.takmaad, new { @class = "form-control" , placeholder = "Kullanıcı Adınızı Farklı Girmeyiniz!" })
+    </p>
+    <br />
+    <p style="color:firebrick">
+        @Html.LabelFor(m => m.AdSoyad,"Adınız Soyadınız:")
         @Html.TextBoxFor(m => m.AdSoyad, new { @class = "form-control" })
-        <br />
-        @Html.LabelFor(m => m.Cınsıyet)
-        <br />
+    </p>
+    <br />
+    @Html.LabelFor(m => m.Cınsıyet,"Cinsiyetiniz:")
+    <br />
+    <p style="color:firebrick">
+
         <select id="cinsiyet" name="Cınsıyet">
             <option>Seçiniz</option>
             <option value="Doğru">Kadın</option>
             <option value="Yanlış">Erkek</option>
         </select>
-        <br />
-        @Html.LabelFor(m => m.DogumTarıhı)
+    </p>
+    <br />
+    <p style="color:firebrick">
+        @Html.LabelFor(m => m.DogumTarıhı,"Doğum Tarihiniz:")
         @Html.TextBoxFor(m => m.DogumTarıhı, new { @class = "form-control" })
-        <br />
-        @Html.LabelFor(m => m.DogumYeri)
+    </p>
+    <br />
+    <p style="color:firebrick">
+        @Html.LabelFor(m => m.DogumYeri,"Doğum Yeriniz:")
         @Html.TextBoxFor(m => m.DogumYeri, new { @class = "form-control" })
-        <br />
-        @Html.LabelFor(m => m.Telefon)
+    </p>
+    <br />
+    <p style="color:firebrick">
+        @Html.LabelFor(m => m.Telefon,"Telefonunuz:")
         @Html.TextBoxFor(m => m.Telefon, new { @class = "form-control" })
-        <br />
-        @Html.LabelFor(m => m.Meslegi)
+    </p>
+    <br />
+    <p style="color:firebrick">
+        @Html.LabelFor(m => m.Meslegi,"Mesleğiniz:")
         @Html.TextBoxFor(m => m.Meslegi, new { @class = "form-control" })
-        <br />
-        @Html.LabelFor(m => m.Biografi)
+    </p>
+    <br />
+    <p style="color:firebrick">
+        @Html.LabelFor(m => m.Biografi,"Biografiniz:")
         @Html.TextAreaFor(m => m.Biografi, new { @class = "form-control" })
-    </div>
+    </p>
+</div>
     <div>
         <button class="btn btn-info">KAYDET</button>
     </div>

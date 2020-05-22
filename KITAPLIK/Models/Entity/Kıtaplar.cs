@@ -33,7 +33,6 @@ namespace KITAPLIK.Models.Entity
     
         public virtual KıtapDetay KıtapDetay { get; set; }
         public virtual Kutuphanem Kutuphanem { get; set; }
-        public virtual Kutuphanem Kutuphanem1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Yorum> Yorum { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

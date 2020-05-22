@@ -5,42 +5,41 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+    <h3 style="color:#074490; font-family:'Book Antiqua'; font-weight:bold"><i>Bir Kitaba Yorum Ekleyin...</i></h3>
+
     <div class="form-horizontal">
-        <h4>Yorum</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Yorumıd, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="form-group" style="color:firebrick">
+            @Html.LabelFor(model => model.Yorumıd,"Yorum id:", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Yorumıd, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Yorumıd, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.yorum1, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="form-group" style="color:firebrick">
+            @Html.LabelFor(model => model.yorum1,"Yorumunuz:", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.yorum1, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.yorum1, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.uyeıd, "uyeıd", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="form-group" style="color:firebrick">
+            @Html.LabelFor(model => model.uyeıd, "Kullanıcı Adınız:", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("uyeıd", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.uyeıd, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.kıtapıd, "kıtapıd", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="form-group" style="color:firebrick">
+            @Html.LabelFor(model => model.kıtapıd, "Kitap Adı:", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("kıtapıd", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.kıtapıd, "", new { @class = "text-danger" })
@@ -49,12 +48,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="EKLE" class="btn btn-info" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    <a href="/Yorum/Index" class="btn btn-success glyphicon glyphicon-arrow-left"> LİSTEYE GERİ DÖN</a>
 </div>
