@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="color:#074490; font-family:'Book Antiqua'; font-weight:bold"><i>Eksik Kitap Bildirin...</i></h2>
+<br />
+<div>
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "contact-form", action = "/Iletisim/Index" }))
+    {
+        <div class="contact-line" style="color:firebrick; font-family:'Book Antiqua'">
+            <button class="obligation-button" type="button">
+                <span>Sadece gerekli alanları göster</span>
+            </button>
+        </div>
+        <br />
+        <div class="contact-line">
+            <div class="contact-col1" style="color:firebrick; font-family:'Book Antiqua'">
+                <span>Kullanıcı Adı:</span>
+            </div>
+            <div class="contact-col2">
+                <input type="text" class="input" id="input-nickname" name="NickName" required />
+            </div>
+        </div>
+        <br />
+        <div class="contact-line contact-line-unrequired">
+            <div class="contact-col1" style="color:firebrick; font-family:'Book Antiqua'">
+                <span>Ad Soyad:</span>
+            </div>
+            <div class="contact-col2">
+                <input type="text" class="input" name="FullName" />
+            </div>
+        </div>
+        <br />
+        <div class="contact-line">
+            <div class="contact-col1" style="color:firebrick; font-family:'Book Antiqua'">
+                <span>Email:</span>
+            </div>
+            <div class="contact-col2">
+                <input type="email" class="input" id="input-email" name="Email" required />
+            </div>
+        </div>
+        <br />
+        <div class="contact-line contact-line-unrequired">
+            <div class="contact-col1" style="color:firebrick; font-family:'Book Antiqua'">
+                <span>Telelefon:</span>
+            </div>
+            <div class="contact-col2">
+                <input type="tel" class="input" name="Phone" />
+            </div>
+        </div>
+        <br />
+        <div class="contact-line message">
+            <div class="contact-col1" style="color:firebrick; font-family:'Book Antiqua'">
+                <span>İleti:</span>
+            </div>
+            <div class="contact-col2">
+                <textarea class="textarea" id="input-text" name="Message" required></textarea>
+            </div>
+        </div>
+        <br />
+        <div class="contact-line" style="color:firebrick; font-family:'Book Antiqua'; font-weight:bold">
+            <button id="btn1" type="submit" class="button btn-sm" onclick="formEksikMi()">
+                <span>GÖNDER</span>
+            </button>
+        </div>
+        @*<script>
+                $('btn1').click(function () {
+                    alert('İletiniz Kaydedilmiştir. İlgilendiğiniz için teşekkür ederiz..);
+                });
+            </script>*@
+        <br />
+    }
+</div>
+<br />
+<script>
+    $(document).ready(function () {
+        $(".obligation-button").click(function () {
+            $(".contact-line-unrequired").slideToggle();
+        });
+    });
+
+    function formEksikMi() {
+        var rumuzDegeri = document.getElementById("input-nickname").value;
+        var epostaDegeri = document.getElementById("input-email").value;
+        var iletiDegeri = document.getElementById("input-text").value;
+        if (rumuzDegeri === "" || iletiDegeri === "" || epostaDegeri === "") {
+            alert("Lütfen gerekli alanlari doldurunuz.");
+            return false;
+        }
+        else
+            alert('Eksik kitap bildiriniz kaydedilmiştir.\nİlgilendiğiniz için teşekkür ederiz :)');
+        return true;
+    }
+</script>

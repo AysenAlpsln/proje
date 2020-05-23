@@ -142,6 +142,7 @@
     <Compile Include="Controllers\KesfetController.cs" />
     <Compile Include="Controllers\KıtaplarController.cs" />
     <Compile Include="Controllers\YorumController.cs" />
+    <Compile Include="Controllers\IletisimController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -304,6 +305,7 @@
     <Content Include="Views\Yorum\Edit.cshtml" />
     <Content Include="Views\Yorum\Index.cshtml" />
     <Content Include="Views\Ayarlar\Ayarlar.cshtml" />
+    <Content Include="Views\Iletisim\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
