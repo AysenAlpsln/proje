@@ -9,14 +9,14 @@
 {
     <label>Kitap Ara:</label>
     @Html.Editor("ara")
-    <input type="submit" value="Ara"/>
+    <input type="submit" value="Ara" />
 }
 <h2 style="color:#074490; font-family:'Book Antiqua'; font-weight:bold"><i>Kitapları İnceleyin...</i></h2>
 
 <p>
     @if (User.IsInRole("A"))
     {
-       <h4 class="btn btn-default glyphicon glyphicon-pencil"> @Html.ActionLink(" Kitap Ekle", "Create")</h4>
+        <h4 class="btn btn-default glyphicon glyphicon-pencil"> @Html.ActionLink(" Kitap Ekle", "Create")</h4>
     }
 
 </p>
@@ -31,29 +31,31 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.kıtapadı)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.kıtapresım)
-        </td>
-        
-        <td>
-            <a href="/Kıtaplar/Details/@item.kıtapıd" class="btn btn-primary glyphicon glyphicon-list-alt"> DETAY</a>
-            <a href="/Kıtaplar/Edit/@item.kıtapıd" class="btn btn-info glyphicon glyphicon-plus-sign"> LİSTELERE EKLE</a>
-            @if (User.IsInRole("A"))
-            {
-                <a href="/Kıtaplar/Delete/@item.kıtapıd" class="btn btn-danger glyphicon glyphicon-remove-circle"> SİL</a>
-            }
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.kıtapadı)
+            </td>
 
-            @*@Html.ActionLink("Edit", "Edit", new { id=item.kıtapıd}, new { target = "_blank", name = "link", style = "color : darksalmon" }) |*@
-            @*@Html.ActionLink("Details", "Details", new { id = item.kıtapıd }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.kıtapıd })*@
-        </td>
-    </tr>
-}
+            <td>
+                @Html.DisplayFor(modelItem => item.kıtapresım)
+            </td>
+
+            <td>
+                <a href="/Kıtaplar/Details/@item.kıtapıd" class="btn btn-primary glyphicon glyphicon-list-alt"> DETAY</a>
+                <a href="/Kıtaplar/Edit/@item.kıtapıd" class="btn btn-info glyphicon glyphicon-plus-sign"> LİSTELERE EKLE</a>
+                @if (User.IsInRole("A"))
+                {
+                    <a href="/Kıtaplar/Delete/@item.kıtapıd" class="btn btn-danger glyphicon glyphicon-remove-circle"> SİL</a>
+                }
+
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.kıtapıd}, new { target = "_blank", name = "link", style = "color : darksalmon" }) |*@
+                @*@Html.ActionLink("Details", "Details", new { id = item.kıtapıd }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.kıtapıd })*@
+            </td>
+        </tr>
+    }
 
 </table>
+@*@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }))*@

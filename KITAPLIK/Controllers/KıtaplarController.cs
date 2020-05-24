@@ -21,6 +21,8 @@ namespace KITAPLIK.Controllers
         {
             var kıtaplar = db.Kıtaplar.Include(k => k.KıtapDetay).Include(k => k.Kutuphanem);
             return View(kıtaplar.Where(x => x.kıtapadı.Contains(ara)||ara==null).ToList());
+            //var degerler = db.Kıtaplar.Include(k => k.KıtapDetay).Include(k => k.Kutuphanem).ToList().ToPagedList(sayfa,10);
+            //return View(degerler.Where(x => x.kıtapadı.Contains(ara) || ara == null).ToList());
         }
 
         // GET: Kıtaplar/Details/5

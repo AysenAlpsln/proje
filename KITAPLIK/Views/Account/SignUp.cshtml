@@ -92,9 +92,17 @@
                                     @*<label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
         <input id="passwordsignup" name="sıfre" required="required" type="password" placeholder="eg. X8df!90EO" />*@
                                 </p>
+                                <p style="color:firebrick">
+                                    *Parola harf içeremez!
+                                    <br />
+                                    *Parola özel karakter içeremez!
+                                </p>
                                 <p>
                                     @*<label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
         <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO" />*@
+                                </p>
+                                <p>
+                                    @Html.HiddenFor(m => m.role, new { Value="U"})
                                 </p>
                                 <p class="signin button">
                                     <input type="submit" value="Sign up" />
