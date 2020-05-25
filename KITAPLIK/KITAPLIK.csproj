@@ -142,6 +142,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KesfetController.cs" />
     <Compile Include="Controllers\KıtaplarController.cs" />
+    <Compile Include="Controllers\YazarlarController.cs" />
     <Compile Include="Controllers\YorumController.cs" />
     <Compile Include="Controllers\IletisimController.cs" />
     <Compile Include="Global.asax.cs">
@@ -307,6 +308,11 @@
     <Content Include="Views\Yorum\Index.cshtml" />
     <Content Include="Views\Ayarlar\Ayarlar.cshtml" />
     <Content Include="Views\Iletisim\Index.cshtml" />
+    <Content Include="Views\Yazarlar\Create.cshtml" />
+    <Content Include="Views\Yazarlar\Delete.cshtml" />
+    <Content Include="Views\Yazarlar\Details.cshtml" />
+    <Content Include="Views\Yazarlar\Edit.cshtml" />
+    <Content Include="Views\Yazarlar\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

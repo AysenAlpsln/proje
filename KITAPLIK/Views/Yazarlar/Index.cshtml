@@ -1,0 +1,64 @@
+﻿@model IEnumerable<KITAPLIK.Models.Entity.yazarlar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+@using (Html.BeginForm())
+{
+    <label>Yazar Ara:</label>
+    @Html.Editor("ara")
+    <input type="submit" value="Ara" />
+}
+<h2 style="color:#074490; font-family:'Book Antiqua'; font-weight:bold"><i>Yazarları İnceleyin...</i></h2>
+<p>
+    @if (User.IsInRole("A"))
+    {
+        <h4 class="btn btn-default glyphicon glyphicon-pencil"> @Html.ActionLink("Yazar Ekle", "Create")</h4>
+    }
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <label style="color:firebrick; font-family:'Italic Outline Art'; font-size:large">Yazarın Adı Soyadı</label>
+        </th>
+        @*<th>
+            <label style="color:firebrick; font-family:'Italic Outline Art'; font-size:large">Doğum Tarihi</label>
+        </th>
+        <th>
+            <label style="color:firebrick; font-family:'Italic Outline Art'; font-size:large">Vefat Tarihi</label>
+        </th>
+        <th>
+            <label style="color:firebrick; font-family:'Italic Outline Art'; font-size:large">Eğitimi</label>
+        </th>*@
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.YazarAdSoyad)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.dogum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.olum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.okul)
+            </td>*@
+            <td>
+                <a href="/Yazarlar/Details/@item.Yazarıd" class="btn btn-primary glyphicon glyphicon-list-alt"> DETAY</a>
+                @if (User.IsInRole("A"))
+                {
+                    <a href="/Yazarlar/Edit/@item.Yazarıd" class="btn btn-info glyphicon glyphicon-plus-sign"> DÜZENLE</a>
+                    <a href="/Yazarlar/Delete/@item.Yazarıd" class="btn btn-danger glyphicon glyphicon-remove-circle"> SİL</a>
+                }
+            </td>
+        </tr>
+    }
+
+</table>

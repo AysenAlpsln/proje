@@ -8,7 +8,7 @@
 
 <h3 style="color:#074490; font-family:'Book Antiqua'; font-weight:bold"><i>Bunu silmek istediğinize emin misiniz?</i></h3>
 <div>
-    <h4 style="color:#074490; font-family:'Book Antiqua'; font-weight:bold"><i>Kitap</i></h4>
+    <h4 style="color:#074490; font-family:'Book Antiqua'; font-weight:bold"><i>@Html.DisplayFor(model => model.kıtapadı)</i></h4>
     <hr />
     <dl class="dl-horizontal" style="font-family:'Italic Outline Art'">
         <dt style="color:firebrick">
@@ -63,12 +63,13 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
-    <div class="form-actions no-color">
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a href="/Kıtaplar/Index" class="btn btn-success glyphicon glyphicon-arrow-left"> LİSTEYE GERİ DÖN</a>
-    </div>
+        <div class="form-actions no-color">
+            <input type="submit" value="SİL" class="btn btn-danger" /> |
+            <a href="/Kıtaplar/Index" class="btn btn-success glyphicon glyphicon-arrow-left"> LİSTEYE GERİ DÖN</a>
+        </div>
     }
 </div>

@@ -1,0 +1,51 @@
+﻿@model KITAPLIK.Models.Entity.yazarlar
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="color:cornflowerblue; font-family:'Italic Outline Art'; font-weight:bold"><i>Yazarın Detayları</i></h2>
+
+<div>
+    <br />
+    <h4 style="color:firebrick; font-weight:bold">@Html.DisplayFor(model => model.YazarAdSoyad)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt style="color:firebrick; font-family:'Italic Outline Art'">
+            @Html.LabelFor(model => model.YazarAdSoyad,"Yazarın Adı:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YazarAdSoyad)
+        </dd>
+
+        <dt style="color:firebrick;font-family:'Italic Outline Art'">
+            @Html.LabelFor(model => model.dogum,"Doğum Tarihi:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dogum)
+        </dd>
+
+        <dt style="color:firebrick;font-family:'Italic Outline Art'">
+            @Html.LabelFor(model => model.olum,"Vefat Tarihi:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.olum)
+        </dd>
+
+        <dt style="color:firebrick;font-family:'Italic Outline Art'">
+            @Html.LabelFor(model => model.okul,"Eğitimi:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.okul)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="/Yazarlar/Index" class="btn btn-success glyphicon glyphicon-arrow-left"> LİSTEYE GERİ DÖN</a>
+</p>

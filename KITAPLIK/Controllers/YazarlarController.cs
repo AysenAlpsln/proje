@@ -7,105 +7,94 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KITAPLIK.Models.Entity;
-using PagedList;
-using PagedList.Mvc;
 
 namespace KITAPLIK.Controllers
 {
-    public class KıtaplarController : Controller
+    public class YazarlarController : Controller
     {
         private KıtapEntities3 db = new KıtapEntities3();
 
-        // GET: Kıtaplar
+        // GET: Yazarlar
         public ActionResult Index(string ara)
         {
-            var kıtaplar = db.Kıtaplar.Include(k => k.KıtapDetay).Include(k => k.Kutuphanem);
-            return View(kıtaplar.Where(x => x.kıtapadı.Contains(ara)||ara==null).ToList());
-            //var degerler = db.Kıtaplar.Include(k => k.KıtapDetay).Include(k => k.Kutuphanem).ToList().ToPagedList(sayfa,10);
-            //return View(degerler.Where(x => x.kıtapadı.Contains(ara) || ara == null).ToList());
+            var yazar = db.yazarlar;
+            return View(yazar.Where(x => x.YazarAdSoyad.Contains(ara)||ara==null).ToList());
         }
 
-        // GET: Kıtaplar/Details/5
+        // GET: Yazarlar/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Kıtaplar kıtaplar = db.Kıtaplar.Find(id);
-            if (kıtaplar == null)
+            yazarlar yazarlar = db.yazarlar.Find(id);
+            if (yazarlar == null)
             {
                 return HttpNotFound();
             }
-            return View(kıtaplar);
+            return View(yazarlar);
         }
 
-        [Authorize(Roles ="A")]
-        // GET: Kıtaplar/Create
+        [Authorize(Roles = "A")]
+        // GET: Yazarlar/Create
         public ActionResult Create()
         {
-            ViewBag.kıtapıd = new SelectList(db.KıtapDetay, "kıtapıd", "kıtapcevırmenı");
-            ViewBag.kıtapıd = new SelectList(db.Kutuphanem, "kıtapıd", "kıtapıd");
             return View();
         }
 
-        // POST: Kıtaplar/Create
+        // POST: Yazarlar/Create
         // Aşırı gönderim saldırılarından korunmak için, lütfen bağlamak istediğiniz belirli özellikleri etkinleştirin, 
         // daha fazla bilgi için https://go.microsoft.com/fwlink/?LinkId=317598 sayfasına bakın.
         [Authorize(Roles = "A")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "kıtapıd,kıtapadı,acıklama,kıtapresım,cokokunanlar,edıtorunsectıklerı,Anasayfa,Surukleyıcıyenılerıcın")] Kıtaplar kıtaplar)
+        public ActionResult Create([Bind(Include = "Yazarıd,YazarAdSoyad,dogum,olum,okul")] yazarlar yazarlar)
         {
             if (ModelState.IsValid)
             {
-                db.Kıtaplar.Add(kıtaplar);
+                db.yazarlar.Add(yazarlar);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.kıtapıd = new SelectList(db.KıtapDetay, "kıtapıd", "kıtapcevırmenı", kıtaplar.kıtapıd);
-            ViewBag.kıtapıd = new SelectList(db.Kutuphanem, "kıtapıd", "kıtapıd", kıtaplar.kıtapıd);
-            return View(kıtaplar);
+            return View(yazarlar);
         }
 
-        // GET: Kıtaplar/Edit/5
+        // GET: Yazarlar/Edit/5
+        [Authorize(Roles = "A")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Kıtaplar kıtaplar = db.Kıtaplar.Find(id);
-            if (kıtaplar == null)
+            yazarlar yazarlar = db.yazarlar.Find(id);
+            if (yazarlar == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.kıtapıd = new SelectList(db.KıtapDetay, "kıtapıd", "kıtapcevırmenı", kıtaplar.kıtapıd);
-            ViewBag.kıtapıd = new SelectList(db.Kutuphanem, "kıtapıd", "kıtapıd", kıtaplar.kıtapıd);
-            return View(kıtaplar);
+            return View(yazarlar);
         }
 
-        // POST: Kıtaplar/Edit/5
+        // POST: Yazarlar/Edit/5
         // Aşırı gönderim saldırılarından korunmak için, lütfen bağlamak istediğiniz belirli özellikleri etkinleştirin, 
         // daha fazla bilgi için https://go.microsoft.com/fwlink/?LinkId=317598 sayfasına bakın.
+        [Authorize(Roles = "A")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "kıtapıd,kıtapadı,acıklama,kıtapresım,cokokunanlar")] Kıtaplar kıtaplar)
+        public ActionResult Edit([Bind(Include = "Yazarıd,YazarAdSoyad,dogum,olum,okul")] yazarlar yazarlar)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(kıtaplar).State = EntityState.Modified;
+                db.Entry(yazarlar).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.kıtapıd = new SelectList(db.KıtapDetay, "kıtapıd", "kıtapcevırmenı", kıtaplar.kıtapıd);
-            ViewBag.kıtapıd = new SelectList(db.Kutuphanem, "kıtapıd", "kıtapıd", kıtaplar.kıtapıd);
-            return View(kıtaplar);
+            return View(yazarlar);
         }
 
-
-        // GET: Kıtaplar/Delete/5
+        // GET: Yazarlar/Delete/5
         [Authorize(Roles = "A")]
         public ActionResult Delete(int? id)
         {
@@ -113,22 +102,22 @@ namespace KITAPLIK.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Kıtaplar kıtaplar = db.Kıtaplar.Find(id);
-            if (kıtaplar == null)
+            yazarlar yazarlar = db.yazarlar.Find(id);
+            if (yazarlar == null)
             {
                 return HttpNotFound();
             }
-            return View(kıtaplar);
+            return View(yazarlar);
         }
 
-        // POST: Kıtaplar/Delete/5
+        // POST: Yazarlar/Delete/5
         [Authorize(Roles = "A")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Kıtaplar kıtaplar = db.Kıtaplar.Find(id);
-            db.Kıtaplar.Remove(kıtaplar);
+            yazarlar yazarlar = db.yazarlar.Find(id);
+            db.yazarlar.Remove(yazarlar);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
