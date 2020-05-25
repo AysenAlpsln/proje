@@ -42,8 +42,7 @@ namespace KITAPLIK.Controllers
             }
             else
             {
-                //ViewBag.Mesaj = "Geçersiz Kullanıcı Adı veya Parola Girdiniz!";
-                return View();
+                return RedirectToAction("SignUp");
             }
         }
 
