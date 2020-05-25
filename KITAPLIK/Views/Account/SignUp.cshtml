@@ -10,7 +10,7 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="en" class="no-js">
- <!--<![endif]-->
+<!--<![endif]-->
 <head>
     <meta charset="UTF-8" />
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
@@ -39,25 +39,25 @@
                         @*@ViewBag.Mesaj*@
                         @using (Html.BeginForm("Login", "Account", FormMethod.Post))
                         {
-                            <h1>Log in</h1>
+                            <h1>Giris Yap</h1>
                             <p>
                                 @Html.LabelFor(model => model.takmaad, "Kullanıcı Adı:")
                                 @Html.TextBoxFor(model => model.takmaad, new { @class = "form-control", placeholder = "Kullanıcı Adınızı Giriniz..." })
                                 @*<label for="username" class="uname" data-icon="u"> Your username </label>
-                <input id="username" name="takmaad" required="required" type="text" placeholder="myusername" />*@
+                                    <input id="username" name="takmaad" required="required" type="text" placeholder="myusername" />*@
                             </p>
                             <p>
                                 @Html.LabelFor(model => model.sıfre, "Parola:")
-                                @Html.PasswordFor(model => model.sıfre, new { @class = "form-control", placeholder = "Parolanızı Giriniz..." })
+                                @Html.PasswordFor(model => model.sıfre, new { @class = "form-control", type = "password", placeholder = "Parolanızı Giriniz..." })
                                 @*<label for="password" class="youpasswd" data-icon="p"> Your password </label>
-                <input id="password" name="sıfre" required="required" type="password" placeholder="eg. X8df!90EO" />*@
+                                    <input id="password" name="sıfre" required="required" type="password" placeholder="eg. X8df!90EO" />*@
                             </p>
                             <p class="login button">
-                                <input type="submit" value="Login" />
+                                <input type="submit" value="Giris Yap" />
                             </p>
                             <p class="change_link">
-                                Not a member yet ?
-                                <a href="#toregister" class="to_register">Join us</a>
+                                Henüz üye değil misiniz?
+                                <a href="#toregister" class="to_register">Bize Katıl</a>
                             </p>
                         }
                     </div>
@@ -65,51 +65,48 @@
                     <div id="register" class="animate form">
                         @using (Html.BeginForm("SignUp", "Account", FormMethod.Post))
                         {
-                            <h1> Sign up </h1>
+                            <h1> Kaydol </h1>
                             <form action="#" method="post">
                                 <p>
-                                    @Html.LabelFor(model => model.AdSoyad,"Ad Soyad:")
-                                    @Html.TextBoxFor(model => model.AdSoyad, new { @class="form-control",placeholder="Adınız ve Soyadınız..."})
+                                    @Html.LabelFor(model => model.AdSoyad, "Ad Soyad:")
+                                    @Html.TextBoxFor(model => model.AdSoyad, new { @class = "form-control", placeholder = "Adınız ve Soyadınız..." })
                                     @*<label for="namesignup" class="name" data-icon="u">Your name and surname</label>
-                                    <input id="namesignup" name="AdSoyad" required="required" type="text" placeholder="Name and Surname..." />*@
+                                        <input id="namesignup" name="AdSoyad" required="required" type="text" placeholder="Name and Surname..." />*@
                                 </p>
                                 <p>
-                                    @Html.LabelFor(model => model.takmaad,"Kullanıcı Adı:")
+                                    @Html.LabelFor(model => model.takmaad, "Kullanıcı Adı:")
                                     @Html.TextBoxFor(model => model.takmaad, new { @class = "form-control", placeholder = "Belirlediğiniz Kullanıcı Adı..." })
                                     @*<label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-        <input id="usernamesignup" name="takmaad" required="required" type="text" placeholder="mysuperusername" />*@
+                                        <input id="usernamesignup" name="takmaad" required="required" type="text" placeholder="mysuperusername" />*@
                                 </p>
 
                                 <p>
-                                    @Html.LabelFor(model => model.emaıl,"Email:")
-                                    @Html.TextBoxFor(model => model.emaıl, new { @class = "form-control", placeholder = "Mail Adresiniz..." })
+                                    @Html.LabelFor(model => model.emaıl, "Email:")
+                                    @Html.TextBoxFor(model => model.emaıl, new { @class = "form-control", type = "email", placeholder = "Mail Adresiniz..." })
                                     @*<label for="emailsignup" class="youmail" data-icon="e"> Your email</label>
-        <input id="emailsignup" name="emaıl" required="required" type="email" placeholder="mysupermail@mail.com" />*@
+                                        <input id="emailsignup" name="emaıl" required="required" type="email" placeholder="mysupermail@mail.com" />*@
                                 </p>
                                 <p>
-                                    @Html.LabelFor(model => model.sıfre,"Parola:")
-                                    @Html.TextBoxFor(model => model.sıfre, new { @class = "form-control", placeholder = "Belirlediğiniz Paralo..." })
+                                    @Html.LabelFor(model => model.sıfre, "Parola:")
+                                    @Html.TextBoxFor(model => model.sıfre, new { @class = "form-control", type = "password", placeholder = "Belirlediğiniz Parola..." })
                                     @*<label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-        <input id="passwordsignup" name="sıfre" required="required" type="password" placeholder="eg. X8df!90EO" />*@
+                                        <input id="passwordsignup" name="sıfre" required="required" type="password" placeholder="eg. X8df!90EO" />*@
+                                </p>
+                                <p>
+                                    @Html.HiddenFor(m => m.role, new { Value = "U" })
                                 </p>
                                 <p style="color:firebrick">
                                     *Parola harf içeremez!
                                     <br />
                                     *Parola özel karakter içeremez!
                                 </p>
-                                <p>
-                                    @*<label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-        <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO" />*@
-                                </p>
-                                <p>
-                                    @Html.HiddenFor(m => m.role, new { Value="U"})
-                                </p>
+
                                 <p class="signin button">
-                                    <input type="submit" value="Sign up" />
+                                    <input type="submit" value="Kaydol" />
                                 </p>
                                 <p class="change_link">
-                                    Already a member ?
-                                    <a href="#tologin" class="to_register"> Go and log in </a>
+                                    Zaten üye misiniz ?
+                                    <a href="#tologin" class="to_register"> Giriş Yap </a>
                                 </p>
                             </form>
                         }
