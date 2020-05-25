@@ -31,14 +31,6 @@
         </div>
 
         <div class="form-group" style="color:firebrick">
-            @Html.LabelFor(model => model.kıtapresım, "Kitap Resmi:", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.kıtapresım, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.kıtapresım, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group" style="color:firebrick">
             @Html.LabelFor(model => model.KıtapDetay.kitapyazar, "Kitabın Yazarı:", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.KıtapDetay.kitapyazar, new { htmlAttributes = new { @class = "form-control" } })
@@ -113,16 +105,6 @@
                 </div>
             </div>
         </div>
-
-        @*<div class="form-group" style="color:firebrick">
-            @Html.LabelFor(model => model.Anasayfa, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Anasayfa)
-                    @Html.ValidationMessageFor(model => model.Anasayfa, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>*@
 
         <div class="form-group" style="color:firebrick">
             @Html.LabelFor(model => model.Surukleyıcıyenılerıcın, "Yeniler İçin Sürükleyici Mi?:", htmlAttributes: new { @class = "control-label col-md-2" })
