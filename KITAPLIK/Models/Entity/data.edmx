@@ -88,12 +88,15 @@
           </Key>
           <Property Name="Yazarıd" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="YazarAdSoyad" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="dogum" Type="nvarchar(max)" />
+          <Property Name="olum" Type="nvarchar(max)" />
+          <Property Name="okul" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Yorum">
           <Key>
             <PropertyRef Name="Yorumıd" />
           </Key>
-          <Property Name="Yorumıd" Type="int" Nullable="false" />
+          <Property Name="Yorumıd" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="yorum" Type="nvarchar(max)" />
           <Property Name="uyeıd" Type="int" Nullable="false" />
           <Property Name="kıtapıd" Type="int" Nullable="false" />
@@ -369,6 +372,9 @@
           <Property Name="Yazarıd" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="YazarAdSoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Kıtaplar" Relationship="Self.KıtapYazar" FromRole="yazarlar" ToRole="Kıtaplar" />
+          <Property Name="dogum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="olum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="okul" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Yorum">
           <Key>
@@ -578,6 +584,9 @@
           <EntitySetMapping Name="yazarlar">
             <EntityTypeMapping TypeName="data.yazarlar">
               <MappingFragment StoreEntitySet="yazarlar">
+                <ScalarProperty Name="okul" ColumnName="okul" />
+                <ScalarProperty Name="olum" ColumnName="olum" />
+                <ScalarProperty Name="dogum" ColumnName="dogum" />
                 <ScalarProperty Name="Yazarıd" ColumnName="Yazarıd" />
                 <ScalarProperty Name="YazarAdSoyad" ColumnName="YazarAdSoyad" />
               </MappingFragment>

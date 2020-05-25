@@ -22,6 +22,9 @@ namespace KITAPLIK.Models.Entity
     
         public int Yazarıd { get; set; }
         public string YazarAdSoyad { get; set; }
+        public string dogum { get; set; }
+        public string olum { get; set; }
+        public string okul { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Kıtaplar> Kıtaplar { get; set; }
