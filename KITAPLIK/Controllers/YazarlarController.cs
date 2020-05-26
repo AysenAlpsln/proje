@@ -44,8 +44,6 @@ namespace KITAPLIK.Controllers
         }
 
         // POST: Yazarlar/Create
-        // Aşırı gönderim saldırılarından korunmak için, lütfen bağlamak istediğiniz belirli özellikleri etkinleştirin, 
-        // daha fazla bilgi için https://go.microsoft.com/fwlink/?LinkId=317598 sayfasına bakın.
         [Authorize(Roles = "A")]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -78,8 +76,6 @@ namespace KITAPLIK.Controllers
         }
 
         // POST: Yazarlar/Edit/5
-        // Aşırı gönderim saldırılarından korunmak için, lütfen bağlamak istediğiniz belirli özellikleri etkinleştirin, 
-        // daha fazla bilgi için https://go.microsoft.com/fwlink/?LinkId=317598 sayfasına bakın.
         [Authorize(Roles = "A")]
         [HttpPost]
         [ValidateAntiForgeryToken]

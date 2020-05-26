@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace KITAPLIK.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="A,U")]
     public class AnasayfaController : Controller
     {
         // GET: Anasayfa

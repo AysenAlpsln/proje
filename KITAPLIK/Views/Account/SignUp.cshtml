@@ -36,21 +36,16 @@
                 <a class="hiddenanchor" id="tologin"></a>
                 <div id="wrapper">
                     <div id="login" class="animate form">
-                        @*@ViewBag.Mesaj*@
                         @using (Html.BeginForm("Login", "Account", FormMethod.Post))
                         {
                             <h1>Giris Yap</h1>
                             <p>
                                 @Html.LabelFor(model => model.takmaad, "Kullanıcı Adı:")
                                 @Html.TextBoxFor(model => model.takmaad, new { @class = "form-control", placeholder = "Kullanıcı Adınızı Giriniz..." })
-                                @*<label for="username" class="uname" data-icon="u"> Your username </label>
-                                    <input id="username" name="takmaad" required="required" type="text" placeholder="myusername" />*@
                             </p>
                             <p>
                                 @Html.LabelFor(model => model.sıfre, "Parola:")
                                 @Html.PasswordFor(model => model.sıfre, new { @class = "form-control", type = "password", placeholder = "Parolanızı Giriniz..." })
-                                @*<label for="password" class="youpasswd" data-icon="p"> Your password </label>
-                                    <input id="password" name="sıfre" required="required" type="password" placeholder="eg. X8df!90EO" />*@
                             </p>
                             <p class="login button">
                                 <input type="submit" value="Giris Yap" />
@@ -70,27 +65,18 @@
                                 <p>
                                     @Html.LabelFor(model => model.AdSoyad, "Ad Soyad:")
                                     @Html.TextBoxFor(model => model.AdSoyad, new { @class = "form-control", placeholder = "Adınız ve Soyadınız..." })
-                                    @*<label for="namesignup" class="name" data-icon="u">Your name and surname</label>
-                                        <input id="namesignup" name="AdSoyad" required="required" type="text" placeholder="Name and Surname..." />*@
                                 </p>
                                 <p>
                                     @Html.LabelFor(model => model.takmaad, "Kullanıcı Adı:")
                                     @Html.TextBoxFor(model => model.takmaad, new { @class = "form-control", placeholder = "Belirlediğiniz Kullanıcı Adı..." })
-                                    @*<label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-                                        <input id="usernamesignup" name="takmaad" required="required" type="text" placeholder="mysuperusername" />*@
                                 </p>
-
                                 <p>
                                     @Html.LabelFor(model => model.emaıl, "Email:")
                                     @Html.TextBoxFor(model => model.emaıl, new { @class = "form-control", type = "email", placeholder = "Mail Adresiniz..." })
-                                    @*<label for="emailsignup" class="youmail" data-icon="e"> Your email</label>
-                                        <input id="emailsignup" name="emaıl" required="required" type="email" placeholder="mysupermail@mail.com" />*@
                                 </p>
                                 <p>
                                     @Html.LabelFor(model => model.sıfre, "Parola:")
                                     @Html.TextBoxFor(model => model.sıfre, new { @class = "form-control", type = "password", placeholder = "Belirlediğiniz Parola..." })
-                                    @*<label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-                                        <input id="passwordsignup" name="sıfre" required="required" type="password" placeholder="eg. X8df!90EO" />*@
                                 </p>
                                 <p>
                                     @Html.HiddenFor(m => m.role, new { Value = "U" })

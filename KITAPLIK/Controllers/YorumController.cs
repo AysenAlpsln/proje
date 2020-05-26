@@ -21,21 +21,7 @@ namespace KITAPLIK.Controllers
             return View(yorum.ToList());
         }
 
-        //// GET: Yorum/Details/5
-        //public ActionResult Details(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Yorum yorum = db.Yorum.Find(id);
-        //    if (yorum == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(yorum);
-        //}
-
+        
         // GET: Yorum/Create
         public ActionResult Create()
         {
@@ -45,8 +31,6 @@ namespace KITAPLIK.Controllers
         }
 
         // POST: Yorum/Create
-        // Aşırı gönderim saldırılarından korunmak için, lütfen bağlamak istediğiniz belirli özellikleri etkinleştirin, 
-        // daha fazla bilgi için https://go.microsoft.com/fwlink/?LinkId=317598 sayfasına bakın.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Yorumıd,yorum1,uyeıd,kıtapıd")] Yorum yorum)
@@ -62,41 +46,6 @@ namespace KITAPLIK.Controllers
             ViewBag.uyeıd = new SelectList(db.Uyeler, "Uyeıd", "takmaad", yorum.uyeıd);
             return View(yorum);
         }
-
-        //// GET: Yorum/Edit/5
-        //public ActionResult Edit(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Yorum yorum = db.Yorum.Find(id);
-        //    if (yorum == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    ViewBag.kıtapıd = new SelectList(db.Kıtaplar, "kıtapıd", "kıtapadı", yorum.kıtapıd);
-        //    ViewBag.uyeıd = new SelectList(db.Uyeler, "Uyeıd", "takmaad", yorum.uyeıd);
-        //    return View(yorum);
-        //}
-
-        //// POST: Yorum/Edit/5
-        //// Aşırı gönderim saldırılarından korunmak için, lütfen bağlamak istediğiniz belirli özellikleri etkinleştirin, 
-        //// daha fazla bilgi için https://go.microsoft.com/fwlink/?LinkId=317598 sayfasına bakın.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Edit([Bind(Include = "Yorumıd,yorum1,uyeıd,kıtapıd")] Yorum yorum)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.Entry(yorum).State = EntityState.Modified;
-        //        db.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
-        //    ViewBag.kıtapıd = new SelectList(db.Kıtaplar, "kıtapıd", "kıtapadı", yorum.kıtapıd);
-        //    ViewBag.uyeıd = new SelectList(db.Uyeler, "Uyeıd", "takmaad", yorum.uyeıd);
-        //    return View(yorum);
-        //}
 
         // GET: Yorum/Delete/5
         [Authorize(Roles ="A")]

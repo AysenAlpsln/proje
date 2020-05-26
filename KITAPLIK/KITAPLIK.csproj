@@ -295,7 +295,6 @@
     <Content Include="Views\Giris\Index.cshtml" />
     <Content Include="Views\Kesfet\Index.cshtml" />
     <Content Include="Views\Hesabım\Hesabım.cshtml" />
-    <Content Include="Views\Hesabım\ProfilGetir.cshtml" />
     <Content Include="Views\Kıtaplar\Create.cshtml" />
     <Content Include="Views\Kıtaplar\Delete.cshtml" />
     <Content Include="Views\Kıtaplar\Details.cshtml" />
@@ -303,8 +302,6 @@
     <Content Include="Views\Kıtaplar\Index.cshtml" />
     <Content Include="Views\Yorum\Create.cshtml" />
     <Content Include="Views\Yorum\Delete.cshtml" />
-    <Content Include="Views\Yorum\Details.cshtml" />
-    <Content Include="Views\Yorum\Edit.cshtml" />
     <Content Include="Views\Yorum\Index.cshtml" />
     <Content Include="Views\Ayarlar\Ayarlar.cshtml" />
     <Content Include="Views\Iletisim\Index.cshtml" />

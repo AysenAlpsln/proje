@@ -24,8 +24,8 @@ namespace KITAPLIK.Controllers
         [HttpPost]
         public ActionResult SignUp(Uyeler acc)
         {
-            db.Uyeler.Add(acc);
-            db.SaveChanges();
+            db.Uyeler.Add(acc);//yazılanları uyelere ekler
+            db.SaveChanges();//veritabanında olan değişiklikleri kaydeder
             return View();
 
   
@@ -34,15 +34,15 @@ namespace KITAPLIK.Controllers
         [HttpPost]
         public ActionResult Login(Uyeler t)
         {
-            var bilgiler = db.Uyeler.FirstOrDefault(x => x.takmaad == t.takmaad && x.sıfre == t.sıfre);
+            var bilgiler = db.Uyeler.FirstOrDefault(x => x.takmaad == t.takmaad && x.sıfre == t.sıfre);//yazılan parola ve kullanıcı adı kayıtlı ise
             if(bilgiler!= null)
             {
                 FormsAuthentication.SetAuthCookie(bilgiler.takmaad, false);
-                return RedirectToAction("Anasayfa", "Anasayfa");
+                return RedirectToAction("Anasayfa", "Anasayfa");//anasayfaya gönderir
             }
             else
             {
-                return RedirectToAction("SignUp");
+                return RedirectToAction("SignUp");//kayıt yok ise sayfa yenilenir
             }
         }
 
@@ -50,7 +50,6 @@ namespace KITAPLIK.Controllers
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("SignUp");
-            //return View("SignUp");
         }
         
     }

@@ -23,15 +23,7 @@
         <th>
             <label style="color:firebrick; font-family:'Italic Outline Art'; font-size:large">Yazarın Adı Soyadı</label>
         </th>
-        @*<th>
-            <label style="color:firebrick; font-family:'Italic Outline Art'; font-size:large">Doğum Tarihi</label>
-        </th>
-        <th>
-            <label style="color:firebrick; font-family:'Italic Outline Art'; font-size:large">Vefat Tarihi</label>
-        </th>
-        <th>
-            <label style="color:firebrick; font-family:'Italic Outline Art'; font-size:large">Eğitimi</label>
-        </th>*@
+        
         <th></th>
     </tr>
 
@@ -41,15 +33,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.YazarAdSoyad)
             </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.dogum)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.olum)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.okul)
-            </td>*@
+            
             <td>
                 <a href="/Yazarlar/Details/@item.Yazarıd" class="btn btn-primary glyphicon glyphicon-list-alt"> DETAY</a>
                 @if (User.IsInRole("A"))

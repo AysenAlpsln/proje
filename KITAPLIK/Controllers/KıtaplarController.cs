@@ -25,7 +25,6 @@ namespace KITAPLIK.Controllers
             //return View(degerler.Where(x => x.kıtapadı.Contains(ara) || ara == null).ToList());
         }
 
-        // GET: Kıtaplar/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -50,8 +49,6 @@ namespace KITAPLIK.Controllers
         }
 
         // POST: Kıtaplar/Create
-        // Aşırı gönderim saldırılarından korunmak için, lütfen bağlamak istediğiniz belirli özellikleri etkinleştirin, 
-        // daha fazla bilgi için https://go.microsoft.com/fwlink/?LinkId=317598 sayfasına bakın.
         [Authorize(Roles = "A")]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -69,7 +66,6 @@ namespace KITAPLIK.Controllers
             return View(kıtaplar);
         }
 
-        // GET: Kıtaplar/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -86,9 +82,6 @@ namespace KITAPLIK.Controllers
             return View(kıtaplar);
         }
 
-        // POST: Kıtaplar/Edit/5
-        // Aşırı gönderim saldırılarından korunmak için, lütfen bağlamak istediğiniz belirli özellikleri etkinleştirin, 
-        // daha fazla bilgi için https://go.microsoft.com/fwlink/?LinkId=317598 sayfasına bakın.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "kıtapıd,kıtapadı,acıklama,kıtapresım,cokokunanlar")] Kıtaplar kıtaplar)
