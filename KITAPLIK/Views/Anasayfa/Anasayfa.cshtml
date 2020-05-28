@@ -1,4 +1,5 @@
 ﻿
+
 @{
     Layout = null;
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -12,18 +13,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>*@
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>*@
     <style>
         footer {
             background-color: #555;
             color: lightgray;
             padding: 15px;
         }
-        
     </style>
 </head>
+<br />
 <body>
-
     <div class="container text-center">
         <div class="row">
             <div class="col-sm-3 well">
@@ -31,7 +31,7 @@
                     <h4 style="color:darkred">@HttpContext.Current.User.Identity.Name</h4>
                     Buraya veritabanından profil resmi çekilecek.
                 </div>
-                
+
                 <div class="alert alert-success fade in">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
                     <p><strong>Haydi!</strong></p>
@@ -41,19 +41,18 @@
                 <p><a href="https://www.goodreads.com/">GoodReads</a></p>
                 <p><a href="https://1000kitap.com/">1000Kitap</a></p>
             </div>
+
             <div class="col-sm-7">
-
-                       Veritabınından çekilen yorumlar eklenecek.
-
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="well">
                             <p></p>
+                            <img src="~/img/platon.jpg" class="img-rounded" height="60" width="60">
                         </div>
                     </div>
                     <div class="col-sm-9">
                         <div class="well">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>"Kalabalıkları felsefi olarak aydınlatmak imkansızdır. Kendini yönetirsen dünyayı yönetecek gücü bulabilirsin."  -Platon </p>
                         </div>
                     </div>
                 </div>
@@ -61,12 +60,12 @@
                     <div class="col-sm-3">
                         <div class="well">
                             <p></p>
-                            <img src="bandmember.jpg" class="img-circle" height="55" width="55" >
+                            <img object-fit="cover" src="~/img/oscar.jpg" class="img-rounded" height="60" width="60">
                         </div>
                     </div>
                     <div class="col-sm-9">
                         <div class="well">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>"İnsanların çoğu, kendileri değil başkalarıdır; düşünceleri başkalarının düşünceleridir; yaşamları başkalarını taklittir ve tutkuları ise alıntılardır. Şimdilerde insanlar öz benliklerinden korkuyorlar." -Oscar Wilde</p>
                         </div>
                     </div>
                 </div>
@@ -74,12 +73,12 @@
                     <div class="col-sm-3">
                         <div class="well">
                             <p></p>
-                            <img src="bandmember.jpg" class="img-circle" height="55" width="55" >
+                            <img src="~/img/tol.jpg" class="img-rounded" height="55" width="55">
                         </div>
                     </div>
                     <div class="col-sm-9">
                         <div class="well">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Hayatta unutamayacağımız en büyük pişmanlık, pişman olurum diye yapmadıklarımızdır." -Lev Nikolayeviç Tolstoy</p>
                         </div>
                     </div>
                 </div>
@@ -87,16 +86,31 @@
                     <div class="col-sm-3">
                         <div class="well">
                             <p></p>
-                            <img src="" class="img-circle" height="55" width="55" >
+                            <img src="~/img/freud.jpg" class="img-rounded" height="55" width="55">
                         </div>
                     </div>
                     <div class="col-sm-9">
                         <div class="well">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>"Bir gün dönüp geçmişe baktığınızda, mücadelelerle geçen yılların hayatınızın en güzel yılları olduğunu fark edeceksiniz." -Sigmund Freud</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="well">
+                            <p></p>
+                            <img src="~/img/dos.jpg" class="img-rounded" height="55" width="55">
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="well">
+                            <p>"Ne ben bir kimseye benziyordum, ne de bir başkası bana. "Onlar hep birlikte, bense onlardan farklıydım" diye derin düşüncelere dalıyordum. Bundan da anlaşılıyor ki, henüz çok toydum." -Fyodor Mihailoviç Dostoyevski</p>
                         </div>
                     </div>
                 </div>
             </div>
+            <br />
+            <br />
             <div class="col-sm-2 well">
                 <div class="thumbnail">
                     <p>Okuma Hedefim</p>
@@ -107,8 +121,6 @@
             </div>
         </div>
     </div>
-
-
 </body>
 </html>
 

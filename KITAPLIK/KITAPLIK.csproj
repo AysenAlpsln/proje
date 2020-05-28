@@ -199,12 +199,17 @@
     <Content Include="Content\Site.css" />
     <Content Include="img\1984.jpg" />
     <Content Include="img\bulbul.jpg" />
+    <Content Include="img\dos.jpg" />
     <Content Include="img\fare.jpg" />
+    <Content Include="img\freud.jpg" />
     <Content Include="img\hayvan.jpg" />
     <Content Include="img\madonna.jpg" />
+    <Content Include="img\oscar.jpg" />
+    <Content Include="img\platon.jpg" />
     <Content Include="img\prens.jpg" />
     <Content Include="img\satranc.jpg" />
     <Content Include="img\serenad.jpg" />
+    <Content Include="img\tol.jpg" />
     <Content Include="img\ucurtma.jpg" />
     <Content Include="img\werther.jpg" />
     <Content Include="img\yusuf.jpg" />
